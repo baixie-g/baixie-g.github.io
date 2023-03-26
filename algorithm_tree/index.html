@@ -1,0 +1,977 @@
+<!DOCTYPE html><html lang="zh-CH" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>算法 | 没时间的菜鸟</title><meta name="keywords" content="glj,博客,baixie-g,软件工程,计算机,HFUT"><meta name="author" content="baixie-g"><meta name="copyright" content="baixie-g"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="不限语言，无限思路">
+<meta property="og:type" content="website">
+<meta property="og:title" content="算法">
+<meta property="og:url" content="https://baixie-g.github.io/algorithm_tree/index.html">
+<meta property="og:site_name" content="没时间的菜鸟">
+<meta property="og:description" content="不限语言，无限思路">
+<meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="https://baixie-g.github.io/themes/butterfly/source/img/txy1.jpg">
+<meta property="article:published_time" content="2022-12-17T11:08:05.000Z">
+<meta property="article:modified_time" content="2023-03-26T13:06:23.280Z">
+<meta property="article:author" content="baixie-g">
+<meta property="article:tag" content="glj,博客,baixie-g,软件工程,计算机,HFUT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://baixie-g.github.io/themes/butterfly/source/img/txy1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://baixie-g.github.io/algorithm_tree/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2023-03-26 21:06:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">没时间的菜鸟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">算法</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><hr>
+<p>注意一下定义不同，知识点散乱请自行分类</p>
+<p>二叉树，平衡二叉树、二叉查找树、平衡二叉搜索树（搜索树）AVL树、B树、B+树、B*树</p>
+<hr>
+<p>节点的度：连接几个节点？</p>
+<p>树的度：最大的节点的度</p>
+<p>叶子结点：度为0的节点</p>
+<p>孩子结点和双亲结点</p>
+<p>孩子存储结构：把所有节点存在组后再链指向子节点门</p>
+<p>每个节点的孩子结点没有次序之分，理解空间结构？</p>
+<p>像线性表加约束变成栈和队列一样</p>
+<p>给树加约束</p>
+<p>二叉树：两个节点左右孩子</p>
+<p>空集</p>
+<p>根节点</p>
+<p>只有左子树或左子树</p>
+<p>含有左右子树</p>
+<p>满二叉树：除了最底层节点，其他节点都有两个子节点</p>
+<p>删除节点：从底层从右往左删除</p>
+<p>满二叉树是特殊的完全二叉树</p>
+<p>求完全二叉树高度：</p>
+<p><img src="/img/loading.gif" data-original="C:\Users\20392\Desktop\gitWarehouse\baixie-g.github.io\source\algorithm_photo\树h.png" alt="树h"></p>
+<p>总分支数&#x3D;总结点数-1</p>
+<p>叶节点数N0</p>
+<p>单分支结点数N1；</p>
+<p>双分支节点数N2；</p>
+<p>总结点数&#x3D;N0+N1+N2；</p>
+<p>总分支数N1+2N2；</p>
+<p>N0&#x3D;N2+1</p>
+<p>叶子节点数&#x3D;双分支节点数+1</p>
+<p>m分支结点数Nm</p>
+<p>总分支数&#x3D;总结点数-1；</p>
+<p>总结点数&#x3D;N0+N1+…Nm</p>
+<p>总分支数&#x3D;N1+2N2+…+mNm</p>
+<p>N0&#x3D;1+N2+2N3+(m-1)Nm</p>
+<hr>
+<p>二叉树的存数结构</p>
+<p>1顺序</p>
+<p>从上至下从左到右塞进数组</p>
+<p>节点n的index为n-1；</p>
+<p>完全二叉树</p>
+<p>左孩子节点2i+1；</p>
+<p>右孩子节点2i+2；</p>
+<p><img src="/img/loading.gif" data-original="C:\Users\20392\Desktop\gitWarehouse\baixie-g.github.io\source\algorithm_photo\image-20230325182813195.png" alt="image-20230325182813195"></p>
+<hr>
+<p>树和二叉树互相转换</p>
+<p>所有平行子节点连接横线</p>
+<p>删除除了最左边的连线外所有连线</p>
+<p>向右是平行子节点</p>
+<p>向左是自己的子节点</p>
+<p>森林和二叉树相互转换</p>
+<p>把根节点从左向右连</p>
+<hr>
+<p>遍历二叉树</p>
+<p>层次遍历&#x2F;广度优先：从上至下从左至右</p>
+<p>下面打点 绕圈（每个访问三次）</p>
+<p>先序遍历第一次就访问</p>
+<p>中序遍历</p>
+<p>后序遍历</p>
+<p>树的遍历</p>
+<p>没有中序遍历 </p>
+<p>先序遍历和转换成二叉树后再先序遍历没有区别</p>
+<p>后续遍历和转成成二叉树后再中序遍历没有区别</p>
+<p>森林遍历与树同理</p>
+<hr>
+<h3 id="ABOUT-搜索"><a href="#ABOUT-搜索" class="headerlink" title="ABOUT 搜索"></a>ABOUT 搜索</h3><p>把数据整理成适合二分法查找的数据结构，这就演化出了树和跳表两种数据结构</p>
+<p>平衡算法AVL树和红黑树</p>
+<p>每一个节点的左边子节点值小于当前节点，右边的子节点值大于当前节点(这里的“值”是基于自己的算法规则而定的，比如hash值)；</p>
+<p>B树</p>
+<p>属于多叉树又名平衡多路查找树；数据库索引技术里大量使用着B树和B+树的数据结构。</p>
+<p>（1）排序方式：左小右大</p>
+<p>（2）子节点数：非叶节点（根节点和枝节点）的子节点数 &gt;1，M路</p>
+<p>（3）关键字数：枝节点的关键字数量大于等于ceil(m&#x2F;2)-1个且小于等于M-1个（注：ceil()是个朝正无穷方向取整的函数 如ceil(1.1)结果为2);</p>
+<p>（4）所有叶子节点均在同一层、叶子节点包含了关键字 和 关键字记录的指针</p>
+<p><img src="/img/loading.gif" data-original="https://pic2.zhimg.com/v2-2c2264cc1c6c603dfeca4f84a2575901_r.jpg" alt="img"></p>
+<ul>
+<li><strong>B树的查询流程：</strong></li>
+</ul>
+<p>如上图我要从上图中找到E字母，查找流程如下</p>
+<p>（1）获取根节点的关键字进行比较，当前根节点关键字为M，E&lt;M（26个字母顺序），所以往找到指向左边的子节点（二分法规则，左小右大，左边放小于当前节点值的子节点、右边放大于当前节点值的子节点）；</p>
+<p>（2）拿到关键字D和G，D&lt;E&lt;G 所以直接找到D和G中间的节点；</p>
+<p>（3）拿到E和F，因为E&#x3D;E 所以直接返回关键字和指针信息（如果树结构里面没有包含所要查找的节点则返回null）；</p>
+<p><strong>B树的插入节点流程</strong></p>
+<p><strong>B树节点的删除</strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27700617">https://zhuanlan.zhihu.com/p/27700617</a></p>
+<hr>
+<h2 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a><strong>B+树</strong></h2><p>B+树的<strong>非叶子</strong>节点<strong>不保存具体的数据，而只保存关键字的索引</strong>，而所有的数据最终都会保存到叶子节点<img src="/img/loading.gif" data-original="https://pic4.zhimg.com/v2-5f069fd820637db1b877fdd6799a2b67_r.jpg" alt="img"></p>
+<p>1、B+<strong>树查询速度更稳定</strong>2、B+<strong>树天然具备排序功能</strong>3、B+<strong>树全节点遍历更快</strong></p>
+<hr>
+<p>B*树</p>
+<p>减少构建中节点合并和拆分的次数，提升树的数据插入、删除性能。</p>
+<p>（1）首先是关键字个数限制问题，B+树初始化的关键字初始化个数是cei(m&#x2F;2)，b<em>树的初始化个数为（cei(2&#x2F;3</em>m)）</p>
+<p>（2）如果兄弟节点未满则向兄弟节点转移关键字，如果兄弟节点已满，则从当前节点和兄弟节点各拿出1&#x2F;3的数据创建一个新的节点出来；</p>
+<p>除了叶子和根，有向右的指针指向兄弟节点用于转移关键字。</p>
+<hr>
+<h2 id="2-3-树"><a href="#2-3-树" class="headerlink" title="2-3 树"></a><strong>2-3 树</strong></h2><p><strong>更好的渐进查找时间 O(log2 n)。****更容易保持树的平衡。</strong></p>
+<hr>
+<h2 id="2-3-4-树（2-4-树）"><a href="#2-3-4-树（2-4-树）" class="headerlink" title="2-3-4 树（2-4 树）"></a><strong>2-3-4 树</strong>（2-4 树）</h2><h2 id="对于非叶节点有三种可能的情况："><a href="#对于非叶节点有三种可能的情况：" class="headerlink" title="对于非叶节点有三种可能的情况："></a>对于非叶节点有三种可能的情况：</h2><p>　　①、有一个数据项的节点总是有两个子节点；</p>
+<p>　　②、有二个数据项的节点总是有三个子节点；</p>
+<p>　　③、有三个数据项的节点总是有四个子节点；</p>
+<p><img src="/img/loading.gif" data-original="https://pic1.zhimg.com/v2-25f789c37041da362772c70aa27f6960_r.jpg" alt="img"></p>
+<p><img src="/img/loading.gif" data-original="https://pic4.zhimg.com/v2-d8398cbf8169b3c0c7e6d2d7756b3d53_r.jpg" alt="img"></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gaochundong/p/balanced_search_tree.html">平衡查找树（2-3-4 树） - sangmado - 博客园 (cnblogs.com)</a></p>
+<p>逻辑描述好</p>
+<p><img src="/img/loading.gif" data-original="https://img2020.cnblogs.com/blog/1759254/202010/1759254-20201018014531700-1631137624.png" alt="img"></p>
+<p><img src="/img/loading.gif" data-original="https://img2020.cnblogs.com/blog/1759254/202010/1759254-20201018014601333-608906046.png" alt="img"></p>
+<p><img src="/img/loading.gif" data-original="https://img2020.cnblogs.com/blog/1759254/202010/1759254-20201018014614194-66156125.png" alt="img"></p>
+<details>
+<summary>完整源码实现</summary>
+  package com.ys.tree.twothreefour;
+
+<p>public class Tree234 {<br> private Node root &#x3D; new Node() ;<br> &#x2F;<em>public Tree234(){<br> root &#x3D; new Node();<br> }</em>&#x2F;<br> &#x2F;&#x2F;查找关键字值<br> public int find(long key){<br> Node curNode &#x3D; root;<br> int childNumber ;<br> while(true){<br> if((childNumber &#x3D; curNode.findItem(key))!&#x3D;-1){<br> return childNumber;<br> }else if(curNode.isLeaf()){&#x2F;&#x2F;节点是叶节点<br> return -1;<br> }else{<br> curNode &#x3D; getNextChild(curNode,key);<br> }<br> }<br> }</p>
+<p> public Node getNextChild(Node theNode,long theValue){<br> int j;<br> int numItems &#x3D; theNode.getNumItems();<br> for(j &#x3D; 0 ; j &lt; numItems ; j++){<br> if(theValue &lt; theNode.getItem(j).dData){<br> return theNode.getChild(j);<br> }<br> }<br> return theNode.getChild(j);<br> }</p>
+<p> &#x2F;&#x2F;插入数据项<br> public void insert(long dValue){<br> Node curNode &#x3D; root;<br> DataItem tempItem &#x3D; new DataItem(dValue);<br> while(true){<br> if(curNode.isFull()){&#x2F;&#x2F;如果节点满数据项了，则分裂节点<br> split(curNode);<br> curNode &#x3D; curNode.getParent();<br> curNode &#x3D; getNextChild(curNode, dValue);<br> }else if(curNode.isLeaf()){&#x2F;&#x2F;当前节点是叶节点<br> break;<br> }else{<br> curNode &#x3D; getNextChild(curNode, dValue);<br> }<br> }&#x2F;&#x2F;end while<br> curNode.insertItem(tempItem);<br> }</p>
+<p> public void split(Node thisNode){<br> DataItem itemB,itemC;<br> Node parent,child2,child3;<br> int itemIndex;<br> itemC &#x3D; thisNode.removeItem();<br> itemB &#x3D; thisNode.removeItem();<br> child2 &#x3D; thisNode.disconnectChild(2);<br> child3 &#x3D; thisNode.disconnectChild(3);<br> Node newRight &#x3D; new Node();<br> if(thisNode &#x3D;&#x3D; root){&#x2F;&#x2F;如果当前节点是根节点，执行根分裂<br> root &#x3D; new Node();<br> parent &#x3D; root;<br> root.connectChild(0, thisNode);<br> }else{<br> parent &#x3D; thisNode.getParent();<br> }<br> &#x2F;&#x2F;处理父节点<br> itemIndex &#x3D; parent.insertItem(itemB);<br> int n &#x3D; parent.getNumItems();<br> for(int j &#x3D; n-1; j &gt; itemIndex ; j–){<br> Node temp &#x3D; parent.disconnectChild(j);<br> parent.connectChild(j+1, temp);<br> }<br> parent.connectChild(itemIndex+1, newRight);</p>
+<p> &#x2F;&#x2F;处理新建的右节点<br> newRight.insertItem(itemC);<br> newRight.connectChild(0, child2);<br> newRight.connectChild(1, child3);<br> }</p>
+<p> &#x2F;&#x2F;打印树节点<br> public void displayTree(){<br> recDisplayTree(root,0,0);<br> }<br> private void recDisplayTree(Node thisNode,int level,int childNumber){<br> System.out.println(“levle&#x3D;”+level+” child&#x3D;”+childNumber+” “);<br> thisNode.displayNode();<br> int numItems &#x3D; thisNode.getNumItems();<br> for(int j &#x3D; 0; j &lt; numItems+1 ; j++){<br> Node nextNode &#x3D; thisNode.getChild(j);<br> if(nextNode !&#x3D; null){<br> recDisplayTree(nextNode, level+1, j);<br> }else{<br> return;<br> }<br> }<br> }</p>
+<p> &#x2F;&#x2F;数据项<br> class DataItem{<br> public long dData;<br> public DataItem(long dData){<br> this.dData &#x3D; dData;<br> }<br> public void displayItem(){<br> System.out.println(“&#x2F;“+dData);<br> }<br> }</p>
+<p> &#x2F;&#x2F;节点<br> class Node{<br> private static final int ORDER &#x3D; 4;<br> private int numItems;&#x2F;&#x2F;表示该节点有多少个数据项<br> private Node parent;&#x2F;&#x2F;父节点<br> private Node childArray[] &#x3D; new Node[ORDER];&#x2F;&#x2F;存储子节点的数组，最多有4个子节点<br> private DataItem itemArray[] &#x3D; new DataItem[ORDER-1];&#x2F;&#x2F;存放数据项的数组，一个节点最多有三个数据项</p>
+<p> &#x2F;&#x2F;连接子节点<br> public void connectChild(int childNum,Node child){<br> childArray[childNum] &#x3D; child;<br> if(child !&#x3D; null){<br> child.parent &#x3D; this;<br> }<br> }<br> &#x2F;&#x2F;断开与子节点的连接，并返回该子节点<br> public Node disconnectChild(int childNum){<br> Node tempNode &#x3D; childArray[childNum];<br> childArray[childNum] &#x3D; null;<br> return tempNode;<br> }<br> &#x2F;&#x2F;得到节点的某个子节点<br> public Node getChild(int childNum){<br> return childArray[childNum];<br> }<br> &#x2F;&#x2F;得到父节点<br> public Node getParent(){<br> return parent;<br> }<br> &#x2F;&#x2F;判断是否是叶节点<br> public boolean isLeaf(){<br> return (childArray[0] &#x3D;&#x3D; null)?true:false;<br> }<br> &#x2F;&#x2F;得到节点数据项的个数<br> public int getNumItems(){<br> return numItems;<br> }<br> &#x2F;&#x2F;得到节点的某个数据项<br> public DataItem getItem(int index){<br> return itemArray[index];<br> }<br> &#x2F;&#x2F;判断节点的数据项是否满了（最多3个）<br> public boolean isFull(){<br> return (numItems &#x3D;&#x3D; ORDER-1) ? true:false;<br> }</p>
+<p> &#x2F;&#x2F;找到数据项在节点中的位置<br> public int findItem(long key){<br> for(int j &#x3D; 0 ; j &lt; ORDER-1 ; j++){<br> if(itemArray[j]&#x3D;&#x3D;null){<br> break;<br> }else if(itemArray[j].dData &#x3D;&#x3D; key){<br> return j;<br> }<br> }<br> return -1;<br> }</p>
+<p> &#x2F;&#x2F;将数据项插入到节点<br> public int insertItem(DataItem newItem){<br> numItems++;<br> long newKey &#x3D; newItem.dData;<br> for(int j &#x3D; ORDER-2 ; j &gt;&#x3D; 0 ; j–){<br> if(itemArray[j] &#x3D;&#x3D; null){&#x2F;&#x2F;如果为空，继续向前循环<br> continue;<br> }else{<br> long itsKey &#x3D; itemArray[j].dData;&#x2F;&#x2F;保存节点某个位置的数据项<br> if(newKey &lt; itsKey){&#x2F;&#x2F;如果比新插入的数据项大<br> itemArray[j+1] &#x3D; itemArray[j];&#x2F;&#x2F;将大数据项向后移动一位<br> }else{<br> itemArray[j+1] &#x3D; newItem;&#x2F;&#x2F;如果比新插入的数据项小，则直接插入<br> return j+1;<br> }<br> }<br> }<br> &#x2F;&#x2F;如果都为空，或者都比待插入的数据项大，则将待插入的数据项放在节点第一个位置<br> itemArray[0] &#x3D; newItem;<br> return 0;<br> }<br> &#x2F;&#x2F;移除节点的数据项<br> public DataItem removeItem(){<br> DataItem temp &#x3D; itemArray[numItems-1];<br> itemArray[numItems-1] &#x3D; null;<br> numItems–;<br> return temp;<br> }<br> &#x2F;&#x2F;打印节点的所有数据项<br> public void displayNode(){<br> for(int j &#x3D; 0 ; j &lt; numItems ; j++){<br> itemArray[j].displayItem();<br> }<br> System.out.println(“&#x2F;“);<br> }<br> }</p>
+<p>} </p>
+<p>​    完整代码乱了尝试codemaid把</p>
+<hr>
+<h2 id="红黑树RBT"><a href="#红黑树RBT" class="headerlink" title="红黑树RBT"></a>红黑树RBT</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/273829162">图解：什么是红黑树？ - 知乎 (zhihu.com)</a>算法4的不是算法导论的</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cy973071263/article/details/122543826">(1条消息) 【数据结构】史上最好理解的红黑树讲解，让你彻底搞懂红黑树_小七mod的博客-CSDN博客</a>好目录</p>
+<ol>
+<li><p>节点是红色或黑色；</p>
+</li>
+<li><p>根节点是黑色；</p>
+</li>
+<li><p>所有叶子节点是黑色；（叶子节点是NULL节点）</p>
+</li>
+<li><p>每个红色节点的两个子节点都是黑色；（从根节点到每个叶子节点的路径上不能有两个连续的红节点）</p>
+</li>
+<li><p>从任何一个节点到每个叶子节点的所有路径都包含相同数目的黑色节点；</p>
+<p><img src="/img/loading.gif" data-original="https://ask.qcloudimg.com/http-save/yehe-5761033/ggqbf85krq.png?imageView2/2/w/2560/h/7000" alt="img"></p>
+</li>
+</ol>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p><strong>为了让平衡二叉树重新维持在一个平衡状态，就需要对其进行旋转处理, 那么创建一颗平衡二叉树的成本其实不小。红黑树是具备了某些特性的二叉搜索树，能解决非平衡树问题，</strong>红黑树是一种接近平衡的二叉树（说它是接近平衡因为它并没有像AVL树的平衡因子的概念，它只是靠着满足红黑节点的5条性质来维持一种接近平衡的结构，进而提升整体的性能，并没有严格的卡定某个平衡因子来维持绝对平衡）。</p>
+<p><strong>左倾红黑树（LLRB，Left-Learning Red-Black Tree）</strong>一个节点如果有红色子节点，那么，它的红色子节点是向左倾斜的。</p>
+<p><strong>右倾红黑树（RLRB，Right-Learning Red-Black Tree）</strong>反之</p>
+<h3 id="AA树所有的红色子节点必须只能是右节点"><a href="#AA树所有的红色子节点必须只能是右节点" class="headerlink" title="AA树所有的红色子节点必须只能是右节点"></a>AA树所有的红色子节点必须只能是右节点</h3><hr>
+<h2 id="234tree-gt-RBT"><a href="#234tree-gt-RBT" class="headerlink" title="234tree-&gt;RBT"></a>234tree-&gt;RBT</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/37472912">数据结构和算法（十二）：2-3-4树 - 知乎 (zhihu.com)</a></p>
+<p><img src="/img/loading.gif" data-original="https://pic3.zhimg.com/v2-f48a2f2c5f6f8ba57f29cd40fa2eee66_r.jpg" alt="img"></p>
+<h2 id="23tree-gt-RBT"><a href="#23tree-gt-RBT" class="headerlink" title="23tree-&gt;RBT"></a>23tree-&gt;RBT</h2><p><img src="/img/loading.gif" data-original="https://pic4.zhimg.com/v2-a014c44e35a6f7a445d747770df3c2b3_r.jpg" alt="img"></p>
+<p><img src="/img/loading.gif" data-original="https://pic3.zhimg.com/v2-41c2111d38d3495093b735e748524bfa_r.jpg" alt="img"></p>
+<p><strong>左倾红黑树</strong>LLRB</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/BaoZhiHeng/article/details/84305898">(1条消息) 红黑树进阶—左倾红黑树（LLBR）介绍_MagicUang的博客-CSDN博客</a></p>
+<p>大佬的少代码JAVA实现？</p>
+<hr>
+<h2 id="红黑树的插入"><a href="#红黑树的插入" class="headerlink" title="红黑树的插入"></a>红黑树的插入</h2><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1734282">左倾红黑树、右倾红黑树、AA树，你不知道的还有很多！ - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<p><strong>插入的节点必须为红色，但如果是根节点，就把它涂成黑色。</strong></p>
+<p>假设我们要的到左倾红黑树</p>
+<p>插入第二个节点，右倾红黑树换成2-3-4树后再转换成左倾红黑树</p>
+<p>再插入第三个节点时，旋转</p>
+<p><img src="/img/loading.gif" data-original="https://ask.qcloudimg.com/http-save/yehe-5761033/16eonislx4.png?imageView2/2/w/2560/h/7000" alt="img"></p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>子节点偷不到就偷父节点的，偷过来的元素之后记得可能会合并或者迁移元素。</p>
+<hr>
+<h2 id="树的旋转"><a href="#树的旋转" class="headerlink" title="# 树的旋转"></a># 树的旋转</h2><p>AVL 树和 Splay 等平衡树控制平衡的一种办法</p>
+<blockquote>
+<ol>
+<li>在所有的不平衡情况中，都是按照先 <strong>寻找最小不平衡树</strong>，然后 <strong>寻找所属的不平衡类别</strong>，再 <strong>根据 4 种类别进行固定化程序的操作</strong>。</li>
+<li>LL , LR ，RR ，RL其实已经为我们提供了最后哪个结点作为新的根指明了方向。如 LR 型最后的根结点为原来的根的左孩子的右孩子，RL 型最后的根结点为原来的根的右孩子的左孩子。</li>
+</ol>
+</blockquote>
+<p>1.LL 型</p>
+<p><img src="/img/loading.gif" data-original="https://pic3.zhimg.com/v2-58c02894bce9e580481c075efc35f226_r.jpg" alt="img">所谓 LL 型就是上图左边那种情况，即因为在根节点的左孩子的左子树添加了新节点，导致根节点的平衡因子变为 +2，二叉树失去平衡。对于这种情况，对节点 n 右旋一次即可。</p>
+<p>2.RR 型</p>
+<p><img src="/img/loading.gif" data-original="https://pic3.zhimg.com/v2-58c02894bce9e580481c075efc35f226_r.jpg" alt="img"></p>
+<p>RR 型的情况和 LL 型完全对称。只需要对节点 n 进行一次左旋即可修正。</p>
+<p>3.LR 型</p>
+<p><img src="/img/loading.gif" data-original="https://pic3.zhimg.com/v2-acc2de5f4d30d41a6b39b0c5a9b2dbbe_r.jpg" alt="img"></p>
+<p>LR 就是将新的节点插入到了 n 的左孩子的右子树上导致的不平衡的情况。这时我们需要的是先对 i 进行一次左旋再对 n 进行一次右旋。</p>
+<p>4.RL 型</p>
+<p>RL 就是将新的节点插入到了 n 的右孩子的左子树上导致的不平衡的情况。这时我们需要的是先对 i 进行一次右旋再对 n 进行一次左旋。</p>
+<table>
+<thead>
+<tr>
+<th>插入方式</th>
+<th>描述</th>
+<th>旋转方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>——–</th>
+<th>——————————————————-</th>
+<th>————</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>LL</th>
+<th>在 A 的<strong>左子树</strong>根节点的<strong>左子树</strong>上插入节点而破坏平衡</th>
+<th>右旋转</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>RR</th>
+<th>在 A 的<strong>右子树</strong>根节点的<strong>右子树</strong>上插入节点而破坏平衡</th>
+<th>左旋转</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>双旋</p>
+<blockquote>
+<p>在上述过过程中的旋转都是直线过来的，因此经过一次旋转就可以使其达到平衡。但是如果是折线过来又改怎么旋转呢。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>LR</th>
+<th>在A的<strong>左子树</strong>根节点的<strong>右子树</strong>上插入节点而破坏平衡</th>
+<th>先左旋后右旋</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>RL</th>
+<th>在 A 的<strong>右子树</strong>根节点的<strong>左子树</strong>上插入节点而破坏平衡</th>
+<th>先右旋后左旋</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<pre><code class="cpp">//LL型调整函数
+//返回:新父节点
+Tree LL_rotate(Tree node)&#123;
+    //node为离操作结点最近的失衡的结点
+    Tree parent=NULL,son;
+    //获取失衡结点的父节点
+    parent=node-&gt;parent;
+    //获取失衡结点的左孩子
+    son=node-&gt;lchild;
+    //设置son结点右孩子的父指针
+    if (son-&gt;rchild!=NULL)  son-&gt;rchild-&gt;parent=node;
+    //失衡结点的左孩子变更为son的右孩子
+    node-&gt;lchild=son-&gt;rchild;
+    //更新失衡结点的高度信息
+    update_depth(node);
+    //失衡结点变成son的右孩子
+    son-&gt;rchild=node;
+    //设置son的父结点为原失衡结点的父结点
+    son-&gt;parent=parent;
+    //如果失衡结点不是根结点，则开始更新父节点
+    if (parent!=NULL)&#123;
+        //如果父节点的左孩子是失衡结点，指向现在更新后的新孩子son
+        if (parent-&gt;lchild==node)&#123;
+            parent-&gt;lchild=son;
+        &#125;else&#123;
+             //父节点的右孩子是失衡结点
+              parent-&gt;rchild=son;
+        &#125;
+     &#125;
+    //设置失衡结点的父亲
+    node-&gt;parent=son;
+    //更新son结点的高度信息
+    update_depth(son);
+    return son;
+&#125;
+//RR型调整函数
+//返回新父节点
+Tree RR_rotate(Tree node)&#123;
+    //node为离操作结点最近的失衡的结点
+    Tree parent=NULL,son;
+    //获取失衡结点的父节点
+    parent=node-&gt;parent;
+    //获取失衡结点的右孩子
+    son=node-&gt;rchild;
+    //设置son结点左孩子的父指针
+    if (son-&gt;lchild!=NULL)&#123;
+          son-&gt;lchild-&gt;parent=node;
+    &#125;
+    //失衡结点的右孩子变更为son的左孩子
+    node-&gt;rchild=son-&gt;lchild;
+    //更新失衡结点的高度信息
+    update_depth(node);
+    //失衡结点变成son的左孩子
+    son-&gt;lchild=node;
+    //设置son的父结点为原失衡结点的父结点
+    son-&gt;parent=parent;
+    //如果失衡结点不是根结点，则开始更新父节点
+    if (parent!=NULL)&#123;
+        //如果父节点的左孩子是失衡结点，指向现在更新后的新孩子son
+        if (parent-&gt;lchild==node)&#123;
+            parent-&gt;lchild=son;
+        &#125;else&#123;
+            //父节点的右孩子是失衡结点
+            parent-&gt;rchild=son;
+        &#125; 
+    &#125;
+    //设置失衡结点的父亲
+    node-&gt;parent=son;
+    //更新son结点的高度信息
+    update_depth(son);
+    return son;
+&#125;
+
+
+
+//LR型，先左旋转，再右旋转
+//返回：新父节点
+Tree LR_rotate(Tree node)&#123;
+    RR_rotate(node-&gt;lchild);
+    return LL_rotate(node);
+&#125;
+
+
+//RL型，先右旋转，再左旋转
+//返回:新父节点
+Tree RL_rotate(Tree node)&#123;
+    LL_rotate(node-&gt;rchild);
+    return RR_rotate(node);
+&#125;
+
+
+//更新当前深度
+void update_depth(Tree node)&#123;
+    if (node==NULL)&#123;
+        return;
+    &#125;else&#123;
+        int depth_Lchild=get_balance(node-&gt;lchild); //左孩子深度
+        int depth_Rchild=get_balance(node-&gt;rchild); //右孩子深度
+        node-&gt;depth=max(depth_Lchild,depth_Rchild)+1;
+    &#125;
+&#125;
+
+//获取当前结点的深度
+int get_balance(Tree node)&#123;
+    if (node==NULL)&#123;
+         return 0;
+    &#125;
+    return node-&gt;depth;
+&#125;
+
+//返回当前平衡因子
+int is_balance(Tree node)&#123;
+    if (node==NULL)&#123;
+         return 0;
+    &#125;else&#123;
+         return get_balance(node-&gt;lchild)-get_balance(node-&gt;rchild); 
+    &#125;
+&#125;
+</code></pre>
+<h2 id="右旋-amp-右旋（把根左-x2F-右子拎起来变成根，再把原本子的右子-x2F-左子变成原本根的左子-x2F-右子）"><a href="#右旋-amp-右旋（把根左-x2F-右子拎起来变成根，再把原本子的右子-x2F-左子变成原本根的左子-x2F-右子）" class="headerlink" title="右旋&amp;右旋（把根左&#x2F;右子拎起来变成根，再把原本子的右子&#x2F;左子变成原本根的左子&#x2F;右子）"></a>右旋&amp;右旋（把根左&#x2F;右子拎起来变成根，再把原本子的右子&#x2F;左子变成原本根的左子&#x2F;右子）</h2><pre><code class="c++">
+void lrotate(int &amp;now)//左旋
+&#123;
+    int r = tree[now].r;//注意临时保存
+    tree[now].r = tree[r].l;//左挂右
+    tree[r].l = now;//拎右
+    now = r;//拎右
+    update(tree[now].l), update(now);//注意顺序
+&#125;
+
+void rrotate(int &amp;now)//右旋
+&#123;
+    int l = tree[now].l;//注意临时保存
+    tree[now].l = tree[l].r;//右挂左
+    tree[l].r = now;//拎左
+    now = l;//拎左
+    update(tree[now].r), update(now);//注意顺序
+&#125;
+</code></pre>
+<p>也有</p>
+<pre><code class="c++">nodeptr_t treeRotateLeft(nodeptr_t root) &#123;
+    nodeptr_t right = root-&gt;right;
+
+    root-&gt;right = right-&gt;left;
+    right-&gt;left = root;
+
+    left-&gt;height = max(treeHeight(left-&gt;left), treeHeight(left-&gt;right))+1;
+    right-&gt;height = max(treeHeight(right-&gt;left), treeHeight(right-&gt;right))+1;
+
+    return right;
+&#125;
+nodeptr_t treeRotateRight(nodeptr_t root) &#123;
+    nodeptr_t left = root-&gt;left;
+    
+    root-&gt;left = left-&gt;right; // 将将要被抛弃的节点连接为旋转后的 root 的左孩子
+    left-&gt;right = root; // 调换父子关系
+
+    left-&gt;height = max(treeHeight(left-&gt;left), treeHeight(left-&gt;right))+1;
+    right-&gt;height = max(treeHeight(right-&gt;left), treeHeight(right-&gt;right))+1;
+    
+    return left;
+&#125;
+</code></pre>
+<p>也有</p>
+<pre><code class="c++">Node* rightRotate(Node* cur) &#123;
+    Node* left = cur-&gt;_left;
+    cur-&gt;_left = left-&gt;_right;
+    left-&gt;_right = cur;
+    cur-&gt;h = max((cur-&gt;_left != nullptr ? cur-&gt;_left-&gt;h : 0), (cur-&gt;_right != nullptr ? cur-&gt;_right-&gt;h : 0)) + 1;//更新高度
+    left-&gt;h = max((left-&gt;_left != nullptr ? left-&gt;_left-&gt;h : 0), (left-&gt;_right != nullptr ? left-&gt;_right-&gt;h : 0)) + 1;//更新高度
+    return left;//返回新的头
+&#125;
+
+Node* leftRotate(Node* cur) &#123;
+        Node* rightNode = cur-&gt;_right;
+        cur-&gt;_right = rightNode-&gt;_left;
+        rightNode-&gt;_left = cur;
+        cur-&gt;h = max((cur-&gt;_left != nullptr ? cur-&gt;_left-&gt;h : 0), (cur-&gt;_right != nullptr ? cur-&gt;_right-&gt;h : 0)) + 1;//更新高度
+        rightNode-&gt;h = max((rightNode-&gt;_left != nullptr ? rightNode-&gt;_left-&gt;h : 0), (rightNode-&gt;_right != nullptr ? rightNode-&gt;_right-&gt;h : 0)) + 1;//更新高度
+        return rightNode;//返回新头部
+    &#125;
+</code></pre>
+<hr>
+<p><strong>平衡二叉查找树</strong>AVL 树</p>
+<p>用处：原本序列无序，二叉搜索树一定程度上可以提高搜索效率；原本序列有序如序列右斜树 A &#x3D; {1，2，3，4，5，6}二叉树退化成单链表，搜索效率降低为 O(n)。</p>
+<ol>
+<li>可以是空树。</li>
+<li>所有结点的平衡因子的绝对值都不超过 1 的二叉树。</li>
+</ol>
+<p>增加和删除元素的操作则可能需要借由一次或多次<a href="https://link.zhihu.com/?target=https://zh.wikipedia.org/wiki/%E6%A0%91%E6%97%8B%E8%BD%AC">树旋转</a>，以实现树的重新平衡。</p>
+<hr>
+<h2 id="平衡因子"><a href="#平衡因子" class="headerlink" title="平衡因子"></a>平衡因子</h2><p><strong>定义：</strong>某个结点的左子树的高度减去右子树的高度得到的差值。</p>
+<hr>
+<p>平衡二叉树的节点结构：</p>
+<pre><code class="cpp">typedef struct AVLNode *Tree;
+
+typedef int ElementType;
+
+struct AVLNode&#123;
+
+    int depth; //深度，这里计算每个结点的深度，通过深度的比较可得出是否平衡
+
+    Tree parent; //该结点的父节点
+
+    ElementType val; //结点值
+
+    Tree lchild;
+
+    Tree rchild;
+
+    AVLNode(int val=0) &#123;
+        parent = NULL;
+        depth = 0;
+        lchild = rchild = NULL;
+        this-&gt;val=val;
+    &#125;
+&#125;;
+//or
+struct AVLTreeNode &#123;
+        AVLTreeNode(const pair&lt;K,V&gt;&amp;kv)
+            :_left(nullptr)
+            ,_right(nullptr)
+            ,_kv(kv)
+            ,h(1)//一个节点的高度为1
+        &#123;&#125;
+ 
+        AVLTreeNode&lt;K, V&gt;* _left;//左指针
+        AVLTreeNode&lt;K, V&gt;* _right;//右指针
+        pair&lt;K, V&gt; _kv;
+        int h;.//高度
+    &#125;;
+
+//or
+
+struct node &#123;
+    int             data;
+    int             height;
+    struct node     *left;
+    struct node     *right;
+&#125;
+
+typedef struct node node_t;
+typedef struct node* nodeptr_t;
+
+
+//计算某一个节点的高度
+int treeHeight(nodeptr_t root) &#123;
+    if(root == NULL) &#123;
+        return 0;
+    &#125; else &#123;
+        return max(treeHeight(root-&gt;left),treeHeight(root-&gt;right)) + 1;
+    &#125;
+&#125;
+
+
+//计算平衡因子：
+
+int treeGetBalanceFactor(nodeptr_t root) &#123;
+    if(root == NULL)
+        return 0;
+    else
+        return x-&gt;left-&gt;height - x-&gt;right-&gt;height;
+&#125;
+</code></pre>
+<hr>
+<p><strong>最小失衡子树</strong></p>
+<p>66树</p>
+<p><img src="/img/loading.gif" data-original="https://pic4.zhimg.com/v2-2ddb0f9b832fff594e294dffc299b373_b.webp" alt="动图"></p>
+<ul>
+<li>从新插入节点向上查找，第一个 a b s ( 平 衡 因 子 ) &gt; 1 abs(平衡因子) &gt; 1abs(平衡因子)&gt;1的节点为根的子树，被称为最小不平衡子树</li>
+</ul>
+<p><img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/04ca14c77496471c965045961c1d09bd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5pmT5LmL5pyo5Yid,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<ol>
+<li>新插入节点，可导致平衡二叉树出现多棵不平衡的子树</li>
+<li>只调整最小不平衡子树，就能让整棵树平衡(左高右旋顺时针)</li>
+</ol>
+<hr>
+<h2 id="AVL-树的插入"><a href="#AVL-树的插入" class="headerlink" title="AVL 树的插入"></a>AVL 树的插入</h2><p>迭代：</p>
+<pre><code class="c++">template &lt;class K,class V&gt;
+bool AVLTree&lt;K, V&gt;::AVLInsert(K key, V val)
+&#123;
+    //1.根节点为空，直接插入
+    if (_root == NULL)
+    &#123;
+        _root = new Node(key, val);
+        return true;
+    &#125;
+    //2.根节点不为空
+    else
+    &#123;
+        Node* cur = _root;
+        Node* parent =NULL;
+        //a)找到要插入节点的位置
+        while (cur)
+        &#123;
+            parent = cur;
+            if (cur-&gt;_key &gt; key)
+                cur = cur-&gt;_left;
+            else if (cur-&gt;_key &lt; key)
+                cur = cur-&gt;_right;
+            else
+                return false;   //不允许出现重复元素的节点
+        &#125;
+        //b)插入新节点
+        cur = new Node(key, val);
+        if (parent-&gt;_key&gt;key)
+        &#123;
+            parent-&gt;_left = cur;
+            cur-&gt;_parent = parent;
+        &#125;
+
+        else
+        &#123;
+            parent-&gt;_right = cur;
+            cur-&gt;_parent = parent;
+        &#125;
+
+        //c)插入完成后，调整平衡因子
+        while (parent)
+        &#123;
+            if (cur == parent-&gt;_left)//插入节点在左子树父节点bf--，反之++
+            parent-&gt;_bf--;
+        else
+            parent-&gt;_bf++;
+
+            //1)插入新节点后，parent-&gt;bf==0;说明高度没变，平衡，返回
+            if (parent-&gt;_bf == 0)
+                break;
+            //2)插入节点后parent-&gt;_bf==-1||parent-&gt;_bf==1;说明子树高度改变，则继续向上调整
+            else if (parent-&gt;_bf == -1 || parent-&gt;_bf == 1)
+            &#123;
+                cur = parent;
+                parent = parent-&gt;_parent;
+            &#125;
+            //3)插入节点后parent-&gt;_bf==-2||parent-&gt;_bf==2；说明已经不平衡，需要旋转
+            else
+            &#123;
+                if (parent-&gt;_bf == 2)
+                &#123;
+                    if (cur-&gt;_bf == 1)
+                        RotateL(parent);
+                    else// (cur-&gt;_bf == -1)
+                        RotateRL(parent);
+                &#125;
+                else//parent-&gt;_bf == -2
+                &#123;
+                    if (cur-&gt;_bf == -1)
+                        RotateR(parent);
+                    else// (cur-&gt;_bf == 1)
+                        RotateLR(parent);
+                &#125;
+                break;
+            &#125;
+
+        &#125;//end while (parent)
+        return true;
+    &#125;
+&#125;
+</code></pre>
+<p>递归：</p>
+<pre><code class="c++">void treeInsert(nodeptr_t *rootptr, int value)
+&#123;
+    nodeptr_t newNode;
+    nodeptr_t root = *rootptr;
+
+    if(root == NULL) &#123;
+        newNode = malloc(sizeof(node_t));
+        assert(newNode);
+
+        newNode-&gt;data = value;
+        newNode-&gt;left = newNode-&gt;right = NULL;
+
+        *rootptr = newNode;
+    &#125; else if(root-&gt;data == value) &#123;
+        return;
+    &#125; else &#123;
+        if(root-&gt;data &lt; value)
+            treeInsert(&amp;root-&gt;right,value);
+        else
+            treeInsert(&amp;root-&gt;left,value)
+    &#125;
+
+    treeRebalance(root);//rebalance？
+&#125;
+</code></pre>
+<hr>
+<h2 id="AVL树的删除"><a href="#AVL树的删除" class="headerlink" title="AVL树的删除"></a>AVL树的删除</h2><pre><code class="c++">void treeDelete(nodeptr_t *rootptr, int data)
+&#123;
+    nodeptr_t *toFree; // 拜拜了您呐
+    nodeptr_t root = *rootptr;
+
+    if(root) &#123;
+        if(root-&gt;data == value) &#123;
+            if(root-&gt;right) &#123;
+                root-&gt;data = treeDeleteMin(&amp;(root-&gt;right));
+            &#125; else &#123;
+                toFree = root;
+                *rootptr = toFree-&gt;left;
+                free(toFree);
+            &#125;
+        &#125; else &#123;
+        if(root-&gt;data &lt; value)
+            treeDelete(&amp;root-&gt;right,value);
+        else
+            treeDelete(&amp;root-&gt;left,value)
+        &#125;
+
+        treeRebalance(root);
+    &#125;
+&#125;
+</code></pre>
+<hr>
+<h2 id="四种节点删除方式"><a href="#四种节点删除方式" class="headerlink" title="四种节点删除方式"></a>四种节点删除方式</h2><p>（1）删除叶子节点 </p>
+<p>（2）删除的节点只有左子树 </p>
+<p>（3）删除的节点只有右子树 </p>
+<p>（4）删除的节点既有左子树又有右子树</p>
+<hr>
+<p>整体实现</p>
+<p>[某种]: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/84112101">https://zhuanlan.zhihu.com/p/84112101</a>	“平衡二叉(AVL)树原理与c实现”</p>
+<pre><code class="c">// 获取AVL树的高度
+int avltree_height(AVLTree tree);
+// 前序遍历&quot;AVL树&quot;
+void preorder_avltree(AVLTree tree);
+// 中序遍历&quot;AVL树&quot;
+void inorder_avltree(AVLTree tree);
+// 后序遍历&quot;AVL树&quot;
+void postorder_avltree(AVLTree tree);
+void print_avltree(AVLTree tree, Type key, int direction);
+// (递归实现)查找&quot;AVL树x&quot;中键值为key的节点
+Node* avltree_search(AVLTree x, Type key);
+// (非递归实现)查找&quot;AVL树x&quot;中键值为key的节点
+Node* iterative_avltree_search(AVLTree x, Type key);
+// 查找最小结点：返回tree为根结点的AVL树的最小结点。
+Node* avltree_minimum(AVLTree tree);
+// 查找最大结点：返回tree为根结点的AVL树的最大结点。
+Node* avltree_maximum(AVLTree tree);
+// 将结点插入到AVL树中，返回根节点
+Node* avltree_insert(AVLTree tree, Type key);
+// 删除结点(key是节点值)，返回根节点
+Node* avltree_delete(AVLTree tree, Type key);
+// 销毁AVL树
+void destroy_avltree(AVLTree tree);
+</code></pre>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzQ2MC8zMzkyNA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">baixie-g</div><div class="author-info__description">欢迎，阅读，点评</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/baixie-g/baixie-g.github.io"><i class="fab fa-github"></i><span>跟我走</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/baixie-g/baixie-g.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2039279630@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">g的blog正在建设欢迎您</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后"><img src="/img/loading.gif" data-original="https://s2.loli.net/2022/10/08/JiMLadFYZhGCW1v.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从2022.12以后"/></a><div class="content"><a class="title" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后">从2022.12以后</a><time datetime="2022-11-18T10:49:00.000Z" title="Created 2022-11-18 18:49:00">2022-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于周更"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更">关于周更</a><time datetime="2022-10-16T10:49:00.000Z" title="Created 2022-10-16 18:49:00">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/08/BLOGDAY1/" title="梦开始地方"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦开始地方"/></a><div class="content"><a class="title" href="/2022/10/08/BLOGDAY1/" title="梦开始地方">梦开始地方</a><time datetime="2022-10-08T03:34:12.000Z" title="Created 2022-10-08 11:34:12">2022-10-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">657</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-26T13:13:13.893Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By baixie-g</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="//code.tidio.co/fxvtgx4i7agcyminid1u0se6mqe2neyt.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"./live2d_models/haruna/33/model.2017.tomo-bukatsu.high.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>
