@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CH" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>interface | 没时间的菜鸟</title><meta name="keywords" content="glj,博客,baixie-g,软件工程,计算机,HFUT"><meta name="author" content="baixie-g"><meta name="copyright" content="baixie-g"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="vector&#x2F;&#x2F;这些都是必会的成员函数 size()&#x2F;&#x2F;返回返回容器中元素个数 begin()&#x2F;&#x2F;返回头部迭代器 end()&#x2F;&#x2F;返回尾部+1迭代器 rbegin()&#x2F;&#x2F;返回逆首部迭代器 rend()&#x2F;&#x2F;返回逆尾部-1迭代器 front()&#x2F;&#x2F;返回首个元素 back()&#x2F;&#x2F;返回尾部元素 push_back()&#x2F;&#x2F;在末尾添加一个函数 emplace_back()&#x2F;&#x2F;和push_back()是一样的作用">
+<!DOCTYPE html><html lang="zh-CH" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>interface | 没时间的菜鸟</title><meta name="keywords" content="glj,博客,baixie-g,软件工程,计算机,HFUT"><meta name="author" content="baixie-g"><meta name="copyright" content="baixie-g"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="API Reference Document string string s2(s1, 1);&#x2F;&#x2F;s2为” alue”,长度为4 string s4(s1, 1,3);&#x2F;&#x2F; s4为” alu”,长度为3  str1.substr(0, 2);  &#x2F;&#x2F;指定区间的字串 str1.substr(1);  &#x2F;&#x2F;从指定位置开始切割至尾部 str1.replace(0, 2, &quot;rep&quot;)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="interface">
 <meta property="og:url" content="https://baixie-g.github.io/algorithm_interface/index.html">
 <meta property="og:site_name" content="没时间的菜鸟">
-<meta property="og:description" content="vector&#x2F;&#x2F;这些都是必会的成员函数 size()&#x2F;&#x2F;返回返回容器中元素个数 begin()&#x2F;&#x2F;返回头部迭代器 end()&#x2F;&#x2F;返回尾部+1迭代器 rbegin()&#x2F;&#x2F;返回逆首部迭代器 rend()&#x2F;&#x2F;返回逆尾部-1迭代器 front()&#x2F;&#x2F;返回首个元素 back()&#x2F;&#x2F;返回尾部元素 push_back()&#x2F;&#x2F;在末尾添加一个函数 emplace_back()&#x2F;&#x2F;和push_back()是一样的作用">
+<meta property="og:description" content="API Reference Document string string s2(s1, 1);&#x2F;&#x2F;s2为” alue”,长度为4 string s4(s1, 1,3);&#x2F;&#x2F; s4为” alu”,长度为3  str1.substr(0, 2);  &#x2F;&#x2F;指定区间的字串 str1.substr(1);  &#x2F;&#x2F;从指定位置开始切割至尾部 str1.replace(0, 2, &quot;rep&quot;)">
 <meta property="og:locale" content="zh_CH">
 <meta property="og:image" content="https://s2.loli.net/2022/10/08/JiMLadFYZhGCW1v.png">
 <meta property="article:published_time" content="2023-03-28T03:08:05.000Z">
-<meta property="article:modified_time" content="2023-03-28T11:05:27.610Z">
+<meta property="article:modified_time" content="2023-04-07T12:02:32.387Z">
 <meta property="article:author" content="baixie-g">
 <meta property="article:tag" content="glj,博客,baixie-g,软件工程,计算机,HFUT">
 <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: false,
-  postUpdate: '2023-03-28 19:05:27'
+  postUpdate: '2023-04-07 20:02:32'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,7 +142,50 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">没时间的菜鸟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">interface</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><pre><code class="c++">//这些都是必会的成员函数
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">没时间的菜鸟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">interface</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><p><a target="_blank" rel="noopener" href="https://www.apiref.com/">API Reference Document</a></p>
+<h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><p><img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/20210628120526746.png" alt="在这里插入图片描述"></p>
+<pre><code>string s2(s1, 1);//s2为” alue”,长度为4
+string s4(s1, 1,3);// s4为” alu”,长度为3
+
+str1.substr(0, 2);  //指定区间的字串
+str1.substr(1);  //从指定位置开始切割至尾部
+str1.replace(0, 2, &quot;rep&quot;); //把指定区间的字符替换成参数字符串，区间替换为迭代器
+str1.replace(0, 2,&quot;123&quot;,2);//把指定区间的字符替换成参数字符串的前面2个
+str1.replace(0, 2, &quot;456&quot;, 0, 3);  //把指定区间的字符替换成参数字符串指定的区间字符
+str1.erase(0, 1); //删除指定区间
+str1.erase(2);  //指定删除的起始位置，直至末尾
+string str = to_string(124); //数字转为字符串
+stof(string(&quot;124.3&quot;))
+stoi(str1)
+
+string s1(&quot;value&quot;);
+
+s1.insert(s1.begin(), &#39;s&#39;);//执行后，s1为&quot;svalue&quot;
+s1.insert(s1.begin(), 1, &#39;s&#39;);//执行后，s1为&quot;ssvalue&quot;
+s1.insert(s1.begin(), s1.begin(), ++s1.begin());//执行后，s1为&quot;sssvalue&quot;
+s1.insert(s1.end(), &#123;&#39;1&#39;,&#39;2&#39;&#125;);//执行后，s1为&quot;sssvalue12&quot;
+s1.insert(0,2,’s’); //执行后，s1为” ssvalue”
+s1.insert(5,2,’s’); //执行后，s1为” valuess”
+
+
+getline(cin, s1);读取一整行
+compareTo ()返回 int 类型的差值
+
+必须确保+号的两侧的运算对象至少有一个string。
+
+遍历
+string str(&quot;some string&quot;);
+for (auto c : str)
+    cout &lt;&lt; c &lt;&lt; &quot;,&quot;;
+cout &lt;&lt; endl;
+
+
+
+
+
+
+</code></pre>
+<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><pre><code class="c++">//这些都是必会的成员函数
 size()//返回返回容器中元素个数
 begin()//返回头部迭代器
 end()//返回尾部+1迭代器
@@ -317,7 +360,212 @@ upper_bound()–返回大于某个值元素的迭代器
  
 value_comp()–返回一个用于比较元素间的值的函数
 </code></pre>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzQ2MC8zMzkyNA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">baixie-g</div><div class="author-info__description">欢迎，阅读，点评</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/baixie-g/baixie-g.github.io"><i class="fab fa-github"></i><span>跟我走</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/baixie-g/baixie-g.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2039279630@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">g的blog正在建设欢迎您</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后"><img src="/img/loading.gif" data-original="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从2022.12以后"/></a><div class="content"><a class="title" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后">从2022.12以后</a><time datetime="2022-11-18T10:49:00.000Z" title="Created 2022-11-18 18:49:00">2022-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更"><img src="/img/loading.gif" data-original="https://s2.loli.net/2022/10/08/JiMLadFYZhGCW1v.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于周更"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更">关于周更</a><time datetime="2022-10-16T10:49:00.000Z" title="Created 2022-10-16 18:49:00">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/08/BLOGDAY1/" title="梦开始地方"><img src="/img/loading.gif" data-original="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦开始地方"/></a><div class="content"><a class="title" href="/2022/10/08/BLOGDAY1/" title="梦开始地方">梦开始地方</a><time datetime="2022-10-08T03:34:12.000Z" title="Created 2022-10-08 11:34:12">2022-10-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">657</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-29T04:18:54.128Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By baixie-g</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="cmath"><a href="#cmath" class="headerlink" title="cmath"></a>cmath</h1><pre><code class="c++">double hypot(double x, double y);
+       该函数返回两个参数的平方总和的平方根
+double cos(double n);
+cout&lt;&lt;abs(a)&lt;&lt;endl;//输出a的绝对值
+cout&lt;&lt;floor(b)&lt;&lt;endl;//对b进行向下取整（求不大于实数b的最大整数）
+cout&lt;&lt;ceil(c)&lt;&lt;endl;// 对b进行向上取整（求不小于实数c的最小整数）
+cout&lt;&lt;pow(d,e)&lt;&lt;endl;//计算d的e次方，结果为双精度实数
+cout&lt;&lt;sqrt(f)&lt;&lt;endl;//求实数f的平方根
+cout&lt;&lt;log(g)&lt;&lt;endl;//求实数g的自然数对数（即求g等于10的几次方）
+cout&lt;&lt;exp(h)&lt;&lt;endl;//求实数h的自然指数e的h次方
+常用：
+一、幂计算
+开方：double sqrt(double x);
+x的y次方：double pow(double x, double y);
+
+二、绝对值
+整型绝对值：int abs(x);
+长整型绝对值：long int abs(long int x);
+双精度绝对值：double fabs(double x);
+
+三、取整运算
+向上取整：double ceil(double x);
+向下取整：double floor(double x);
+
+1. 绝对值函数。
+C++中fabs()函数位于&lt; cmath &gt;中，其余绝对值函数位于&lt; cstdlib &gt;中。
+
+int abs(int i) 返回整型参数i的绝对值
+double fabs(double x) 返回双精度参数x的绝对值
+long labs(long n) 返回长整型参数n的绝对值
+double cabs(struct complex znum) 求复数的绝对值
+2. 三角函数
+double acos(double x) 返回x的反余弦arccos(x)值,x为弧度
+double asin(double x) 返回x的反正弦arcsin(x)值,x为弧度
+double atan(double x) 返回x的反正切arctan(x)值,x为弧度
+double atan2(double x，double y) 带两个参数的反正切函数
+double cos(double x) 返回x的余弦cos(x)值,x为弧度
+double sin(double x) 返回x的正弦sin(x)值,x为弧度
+double tan(double x) 返回x的正切tan(x)值,x为弧度
+3. 幂函数
+double fmod (double x,double y); 返回两参数相除x/y的余数
+double sqrt (double x) 返回x的开平方
+double cbrt(double x) 计算x的立方根
+4. 对数函数
+double log(double x) 返回logex的值
+double log10(double x) 返回log10x的值
+double log2(double x) x的二进制对数
+5. 指数函数
+double exp(double x) 返回指数函数e^x的值
+double exp2(double x) 返回2的x次方
+double pow(double x,double y) 返回x^y的值
+double pow10(int p) 返回10^p的值
+frexp(param，n) 二进制浮点数表示方法 x=param*2^n
+double ldexp(double x,int exp);这个函数刚好跟上面那个frexp函数功能相反，它的返回值是x*2^exp
+6. 返回小数
+double modf(double value,double *iptr);拆分value值，返回它的小数部分，iptr指向整数部分（可返回）。
+double frexp(double value,int * exp);这是一个将value值拆分成小数部分f和（以2为底的）指数部分exp，并返回小数部分f，即f* 2^exp。其中f取值在0.5~1.0范围或者0
+7. 取整
+double ceil (double x); 取上整，返回比x大的最小整数
+
+double floor (double x); 取下整，返回比x小的最大整数，即高斯函数[x]
+double round(double x) 返回x的四舍五入值
+8. 最值
+double fmax(double x,double y) 两个参数中的最大值
+double fmin(x, y) 两个参数中的最小值
+9. 补充
+double hypot(double x,double y);已知直角三角形两个直角边长度，求斜边长度
+
+double poly(double x,int degree,double coeffs []);计算多项式
+int matherr(struct exception *e);数学错误计算处理程序
+</code></pre>
+<h1 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h1><pre><code class="c++">//输出全排列next_permutation(num,num+3)
+do&#123;  
+          cout&lt;&lt;num[0]&lt;&lt;&quot; &quot;&lt;&lt;num[1]&lt;&lt;&quot; &quot;&lt;&lt;num[2]&lt;&lt;endl;  
+&#125;while(next_permutation(num,num+3));  
+
+//sort
+template &lt;class RandomAccessIterator&gt;
+  void sort (RandomAccessIterator first, RandomAccessIterator last);
+template &lt;class RandomAccessIterator, class Compare&gt;
+  void sort (RandomAccessIterator first, RandomAccessIterator last, Compare comp);
+compare 是一元判断算式，bool的return a&lt;b
+    
+ 
+ //把小于5的替换为8  replace_if(vec.begin(),vec.end(),fun,8)
+  bool fun(int i)
+  &#123;
+      return i &lt; 5;
+  &#125;
+  int main()  
+  &#123; 
+       int a[] = &#123;1,2,3,4,5,6,7&#125;; 
+       vector&lt;int&gt; vec(a,a+7);
+     replace_if(vec.begin(),vec.end(),fun,8); //vec = [8 8 8 8 5 6 7]
+     return 0;
+  &#125;
+
+//替换
+replace(v.begin(),v.end(),5,55);//把5替换成55 
+
+//swap是&amp;
+
+//count返回序列中等于给定值元素的个数；
+count(ivec.begin() , ivec.end() , searchValue)
+    
+//equal 比较两个序列的逐个元素是否相等；
+    bool equal ( InputIterator1 first1, InputIterator1 last1, InputIterator2 first2 )
+    
+//pred(elem) 返回true时返回第一个达成条件的元素迭代器；
+    vector&lt;int&gt;::iterator it = find_if(v.begin(),v.end(),fun);
+
+//find
+it = find(v.begin(),v.end(),9)
+    
+ //将区间[fist,last)之内每一个元素传入函数fn，在函数fn内对元素进行操作；
+    for_each(v.begin(),v.end(),fn)
+    
+  
+</code></pre>
+<h3 id="不修改内容的序列操作："><a href="#不修改内容的序列操作：" class="headerlink" title="不修改内容的序列操作："></a>不修改内容的序列操作：</h3><p>adjacent_find 查找两个相邻（Adjacent）的等价（Identical）元素</p>
+<p>all_ofC++11 检测在给定范围中是否所有元素都满足给定的条件</p>
+<p>any_ofC++11 检测在给定范围中是否存在元素满足给定条件</p>
+<p>count 返回值等价于给定值的元素的个数</p>
+<p>count_if 返回值满足给定条件的元素的个数</p>
+<p>equal 返回两个范围是否相等</p>
+<p>find 返回第一个值等价于给定值的元素</p>
+<p>find_end 查找范围A中与范围B等价的子范围最后出现的位置</p>
+<p>find_first_of 查找范围A中第一个与范围B中任一元素等价的元素的位置</p>
+<p>find_if 返回第一个值满足给定条件的元素</p>
+<p>find_if_notC++11 返回第一个值不满足给定条件的元素</p>
+<p>for_each 对范围中的每个元素调用指定函数</p>
+<p>mismatch 返回两个范围中第一个元素不等价的位置</p>
+<p>none_ofC++11 检测在给定范围中是否不存在元素满足给定的条件</p>
+<p>search 在范围A中查找第一个与范围B等价的子范围的位置</p>
+<p>search_n 在给定范围中查找第一个连续n个元素都等价于给定值的子范围的位置</p>
+<h3 id="修改内容的序列操作："><a href="#修改内容的序列操作：" class="headerlink" title="修改内容的序列操作："></a>修改内容的序列操作：</h3><p>copy 将一个范围中的元素拷贝到新的位置处</p>
+<p>copy_backward 将一个范围中的元素按逆序拷贝到新的位置处</p>
+<p>copy_ifC++11 将一个范围中满足给定条件的元素拷贝到新的位置处</p>
+<p>copy_nC++11 拷贝 n 个元素到新的位置处</p>
+<p>fill 将一个范围的元素赋值为给定值</p>
+<p>fill_n 将某个位置开始的 n 个元素赋值为给定值</p>
+<p>generate 将一个函数的执行结果保存到指定范围的元素中，用于批量赋值范围中的元素</p>
+<p>generate_n 将一个函数的执行结果保存到指定位置开始的 n 个元素中</p>
+<p>iter_swap 交换两个<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%BF%AD%E4%BB%A3%E5%99%A8&spm=1001.2101.3001.7020">迭代器</a>（Iterator）指向的元素</p>
+<p>moveC++11 将一个范围中的元素移动到新的位置处</p>
+<p>move_backwardC++11 将一个范围中的元素按逆序移动到新的位置处</p>
+<p>random_shuffle 随机打乱指定范围中的元素的位置</p>
+<p>remove 将一个范围中值等价于给定值的元素删除</p>
+<p>remove_if 将一个范围中值满足给定条件的元素删除</p>
+<p>remove_copy 拷贝一个范围的元素，将其中值等价于给定值的元素删除</p>
+<p>remove_copy_if 拷贝一个范围的元素，将其中值满足给定条件的元素删除</p>
+<p>replace 将一个范围中值等价于给定值的元素赋值为新的值</p>
+<p>replace_copy 拷贝一个范围的元素，将其中值等价于给定值的元素赋值为新的值</p>
+<p>replace_copy_if 拷贝一个范围的元素，将其中值满足给定条件的元素赋值为新的值</p>
+<p>replace_if 将一个范围中值满足给定条件的元素赋值为新的值</p>
+<p>reverse 反转排序指定范围中的元素</p>
+<p>reverse_copy 拷贝指定范围的反转排序结果</p>
+<p>rotate 循环移动指定范围中的元素</p>
+<p>rotate_copy 拷贝指定范围的循环移动结果</p>
+<p>shuffleC++11 用指定的随机数引擎随机打乱指定范围中的元素的位置</p>
+<p>swap 交换两个对象的值</p>
+<p>swap_ranges 交换两个范围的元素</p>
+<p>transform 对指定范围中的每个元素调用某个函数以改变元素的值</p>
+<p>unique 删除指定范围中的所有连续重复元素，仅仅留下每组等值元素中的第一个元素。</p>
+<p>unique_copy 拷贝指定范围的唯一化（参考上述的 unique）结果</p>
+<p>划分操作：</p>
+<p>is_partitionedC++11 检测某个范围是否按指定谓词（Predicate）划分过</p>
+<p>partition 将某个范围划分为两组</p>
+<p>partition_copyC++11 拷贝指定范围的划分结果</p>
+<p>partition_pointC++11 返回被划分范围的划分点</p>
+<p>stable_partition 稳定划分，两组元素各维持相对顺序</p>
+<h3 id="排序操作："><a href="#排序操作：" class="headerlink" title="排序操作："></a>排序操作：</h3><p>is_sortedC++11 检测指定范围是否已排序</p>
+<p>is_sorted_untilC++11 返回最大已排序子范围</p>
+<p>nth_element 部份排序指定范围中的元素，使得范围按给定位置处的元素划分</p>
+<p>partial_sort 部份排序</p>
+<p>partial_sort_copy 拷贝部分排序的结果</p>
+<p>sort 排序</p>
+<p>stable_sort 稳定排序</p>
+<h3 id="二分法查找操作："><a href="#二分法查找操作：" class="headerlink" title="二分法查找操作："></a>二分法查找操作：</h3><p>binary_search 判断范围中是否存在值等价于给定值的元素</p>
+<p>equal_range 返回范围中值等于给定值的元素组成的子范围</p>
+<p>lower_bound 返回指向范围中第一个值大于或等于给定值的元素的迭代器</p>
+<p>upper_bound 返回指向范围中第一个值大于给定值的元素的迭代器</p>
+<h3 id="集合操作："><a href="#集合操作：" class="headerlink" title="集合操作："></a>集合操作：</h3><p>includes 判断一个集合是否是另一个集合的子集</p>
+<p>inplace_merge 就绪合并</p>
+<p>merge 合并</p>
+<p>set_difference 获得两个集合的差集</p>
+<p>set_intersection 获得两个集合的交集</p>
+<p>set_symmetric_difference 获得两个集合的对称差</p>
+<p>set_union 获得两个集合的并集</p>
+<h3 id="堆操作："><a href="#堆操作：" class="headerlink" title="堆操作："></a>堆操作：</h3><p>is_heap 检测给定范围是否满足堆结构</p>
+<p>is_heap_untilC++11 检测给定范围中满足堆结构的最大子范围</p>
+<p>make_heap 用给定范围构造出一个堆</p>
+<p>pop_heap 从一个堆中删除最大的元素</p>
+<p>push_heap 向堆中增加一个元素</p>
+<p>sort_heap 将满足堆结构的范围排序</p>
+<h3 id="最大-x2F-最小操作："><a href="#最大-x2F-最小操作：" class="headerlink" title="最大&#x2F;最小操作："></a>最大&#x2F;最小操作：</h3><p>is_permutationC++11 判断一个序列是否是另一个序列的一种排序</p>
+<p>lexicographical_compare 比较两个序列的字典序</p>
+<p>max 返回两个元素中值最大的元素</p>
+<p>max_element 返回给定范围中值最大的元素</p>
+<p>min 返回两个元素中值最小的元素</p>
+<p>min_element 返回给定范围中值最小的元素</p>
+<p>minmaxC++11 返回两个元素中值最大及最小的元素</p>
+<p>minmax_elementC++11 返回给定范围中值最大及最小的元素</p>
+<p>next_permutation 返回给定范围中的元素组成的下一个按字典序的排列</p>
+<p>prev_permutation 返回给定范围中的元素组成的上一个按字典序的排列</p>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzQ2MC8zMzkyNA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">baixie-g</div><div class="author-info__description">欢迎，阅读，点评</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/baixie-g/baixie-g.github.io"><i class="fab fa-github"></i><span>跟我走</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/baixie-g/baixie-g.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2039279630@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">g的blog正在建设欢迎您</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后"><img src="/img/loading.gif" data-original="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从2022.12以后"/></a><div class="content"><a class="title" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后">从2022.12以后</a><time datetime="2022-11-18T10:49:00.000Z" title="Created 2022-11-18 18:49:00">2022-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于周更"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更">关于周更</a><time datetime="2022-10-16T10:49:00.000Z" title="Created 2022-10-16 18:49:00">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/08/BLOGDAY1/" title="梦开始地方"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦开始地方"/></a><div class="content"><a class="title" href="/2022/10/08/BLOGDAY1/" title="梦开始地方">梦开始地方</a><time datetime="2022-10-08T03:34:12.000Z" title="Created 2022-10-08 11:34:12">2022-10-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">657</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-04-08T00:10:50.705Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By baixie-g</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
   if (typeof LivereTower === 'object') {
     window.LivereTower.init()
   }
@@ -430,7 +678,7 @@ document.addEventListener('pjax:error', (e) => {
   if (e.request.status === 404) {
     pjax.loadUrl('/404.html')
   }
-})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"./live2d_models/haruna/33/model.2017.tomo-bukatsu.high.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script>
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div>
         <style>
             [bg-lazy] {
                 background-image: none !important;
@@ -443,4 +691,4 @@ document.addEventListener('pjax:error', (e) => {
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body></html>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"./live2d_models/haruna/33/model.2017.tomo-bukatsu.high.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>
