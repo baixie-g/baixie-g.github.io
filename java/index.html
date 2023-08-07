@@ -1,0 +1,631 @@
+<!DOCTYPE html><html lang="zh-CH" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>java | 没时间的菜鸟</title><meta name="keywords" content="keywords1"><meta name="author" content="baixie-g"><meta name="copyright" content="baixie-g"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="页面描述">
+<meta property="og:type" content="website">
+<meta property="og:title" content="java">
+<meta property="og:url" content="https://baixie-g.github.io/java/index.html">
+<meta property="og:site_name" content="没时间的菜鸟">
+<meta property="og:description" content="页面描述">
+<meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="https://baixie-g.github.io/img/default_top_img.jpg">
+<meta property="article:published_time" content="2023-08-06T03:08:05.000Z">
+<meta property="article:modified_time" content="2023-08-07T11:24:50.663Z">
+<meta property="article:author" content="baixie-g">
+<meta property="article:tag" content="glj,博客,baixie-g,软件工程,计算机,HFUT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://baixie-g.github.io/img/default_top_img.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://baixie-g.github.io/java/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'java',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2023-08-07 19:24:50'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/default_top_img.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">没时间的菜鸟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/learning/"><i class="fa-fw fas fa-archive"></i><span> 大体</span></a></li><li><a class="site-page child" href="/markdown/"><i class="fa-fw fas fa-archive"></i><span> markdown</span></a></li><li><a class="site-page child" href="/git/"><i class="fa-fw fas fa-archive"></i><span> git</span></a></li><li><a class="site-page child" href="/lqb/"><i class="fa-fw fas fa-archive"></i><span> lqb</span></a></li><li><a class="site-page child" href="/algorithm/"><span> algorithm</span></a></li><li><a class="site-page child" href="/c++/"><span> C++</span></a></li><li><a class="site-page child" href="/qt/"><span> qt</span></a></li><li><a class="site-page child" href="/vue/"><span> vue</span></a></li><li><a class="site-page child" href="/npm/"><span> npm</span></a></li><li><a class="site-page child" href="/psprint/"><span> ps</span></a></li><li><a class="site-page child" href="/LibFunc/"><span> 库函数</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> debug</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/debug1/"><span> debug1</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 资源</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-video"></i><span> 图片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/website/"><i class="fa-fw fas fa-folder"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 作者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">java</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><hr>
+<h1 id="package"><a href="#package" class="headerlink" title="package"></a>package</h1><p>Java的类库可以分为以下几种类型：</p>
+<ul>
+<li>Java标准类库（Java Standard Library）：<ul>
+<li><code>java.lang</code>：包含Java语言的核心类，如基本数据类型的包装类、字符串、异常类等。</li>
+<li><code>java.util</code>：提供了集合框架（如List、Set、Map等）、日期和时间操作、随机数生成、排序算法、各种实用工具类等。</li>
+<li><code>java.io</code>：用于进行输入和输出操作的类，包括文件读写、流操作、对象序列化等。</li>
+<li><code>java.net</code>：用于网络编程的类，包括Socket编程、URL处理、HTTP请求等。</li>
+<li><code>java.awt</code>和<code>javax.swing</code>：用于创建图形用户界面（GUI）的类库，提供了窗口、按钮、文本框、标签等组件。</li>
+</ul>
+</li>
+<li>Java集合框架（Java Collections Framework）：<ul>
+<li><code>java.util</code>包中的集合框架提供了一组接口和类，用于存储和操作数据集合。常用的集合类包括<code>ArrayList</code>、<code>LinkedList</code>、<code>HashSet</code>、<code>TreeSet</code>、<code>HashMap</code>、<code>TreeMap</code>等。</li>
+</ul>
+</li>
+<li>Java输入输出（Java I&#x2F;O）：<ul>
+<li><code>java.io</code>包中的类提供了对文件、流和其他I&#x2F;O操作的支持。常用的类包括<code>File</code>、<code>InputStream</code>、<code>OutputStream</code>、<code>Reader</code>、<code>Writer</code>等。</li>
+</ul>
+</li>
+<li>Java并发编程（Java Concurrency）：<ul>
+<li><code>java.util.concurrent</code>包提供了用于多线程和并发编程的类和接口，如线程池、并发集合、原子操作等。</li>
+</ul>
+</li>
+<li>Java数据库连接（Java Database Connectivity，JDBC）：<ul>
+<li><code>java.sql</code>包提供了与数据库进行交互的类和接口，用于执行SQL查询、事务处理、连接数据库等。</li>
+</ul>
+</li>
+<li>Java图形用户界面（Java GUI）：<ul>
+<li><code>javax.swing</code>包提供了用于创建跨平台图形用户界面的类和组件，如窗口、按钮、文本框、标签等。</li>
+</ul>
+</li>
+<li>第三方类库：<ul>
+<li>Apache Commons：Apache软件基金会提供的一组开源类库，包含了各种常用的功能和工具类，如文件操作、字符串处理、日期处理、数学运算等。</li>
+<li>Google Guava：由Google提供的开源Java类库，提供了各种实用的工具类和集合扩展。</li>
+<li>Jackson：用于处理JSON数据的高性能JSON处理库。</li>
+<li>Log4j和SLF4J：用于日志记录的类库，提供了灵活和可扩展的日志记录功能。</li>
+<li>Hibernate：用于对象关系映射（ORM）的框架，简化了Java程序与数据库的交互。</li>
+<li>Spring Framework：一个综合性的Java开发框架，提供了依赖注入、面向切面编程、事务管理等功能。</li>
+</ul>
+</li>
+</ul>
+<h1 id="Scanner主要功能与用法"><a href="#Scanner主要功能与用法" class="headerlink" title="Scanner主要功能与用法"></a>Scanner主要功能与用法</h1><p>Scanner类是Java中用于读取输入的工具类，它提供了各种方法来读取不同类型的数据。下面是Scanner类的主要功能和用法的详细说明：</p>
+<h2 id="1-读取基本类型"><a href="#1-读取基本类型" class="headerlink" title="1.读取基本类型"></a>1.读取基本类型</h2><p>使用Scanner类可以读取各种基本类型的输入数据，例如：</p>
+<ul>
+<li><code>nextInt()</code>：读取一个整数值。</li>
+<li><code>nextDouble()</code>：读取一个双精度浮点数值。</li>
+<li><code>nextFloat()</code>：读取一个单精度浮点数值。</li>
+<li><code>nextLong()</code>：读取一个长整数值。</li>
+<li><code>nextBoolean()</code>：读取一个布尔值。</li>
+</ul>
+<p>这些方法会根据输入的数据类型将输入转换为相应的Java基本类型，并返回读取到的值。</p>
+<p>例如，以下代码片段演示了如何使用Scanner读取整数值：</p>
+<pre><code class="java">Scanner scanner = new Scanner(System.in);
+System.out.print(&quot;请输入一个整数值: &quot;);
+int num = scanner.nextInt();
+System.out.println(&quot;输入的整数值为: &quot; + num);
+</code></pre>
+<h2 id="2-设置分隔符"><a href="#2-设置分隔符" class="headerlink" title="2.设置分隔符"></a>2.设置分隔符</h2><p>Scanner类允许通过使用<code>useDelimiter()</code>方法来设置输入的分隔符。默认情况下，分隔符是空格。</p>
+<p>例如，以下代码片段演示了如何使用逗号作为分隔符读取多个字符串：</p>
+<pre><code class="java">Scanner scanner = new Scanner(System.in);
+scanner.useDelimiter(&quot;,&quot;);
+System.out.print(&quot;请输入多个字符串，使用逗号分隔: &quot;);
+while (scanner.hasNext()) &#123;
+    String str = scanner.next();
+    System.out.println(&quot;读取到的字符串: &quot; + str);
+&#125;
+</code></pre>
+<h2 id="3-跳过输入"><a href="#3-跳过输入" class="headerlink" title="3.跳过输入"></a>3.跳过输入</h2><p>Scanner类提供了<code>skip()</code>方法，可以跳过输入流中的指定模式。</p>
+<p>例如，以下代码片段演示了如何跳过输入流中的一个整数值：</p>
+<pre><code class="java">Scanner scanner = new Scanner(System.in);
+System.out.print(&quot;请输入一个整数值: &quot;);
+scanner.skip(&quot;\\d+&quot;); // 跳过一个或多个数字
+System.out.print(&quot;请输入一个字符串: &quot;);
+String str = scanner.nextLine();
+System.out.println(&quot;输入的字符串为: &quot; + str);
+</code></pre>
+<p>在上述示例中，<code>skip(&quot;\\d+&quot;)</code>方法将跳过一个或多个数字，然后读取输入流中的下一个字符串。</p>
+<h2 id="4-判断下一个元素的数据类型"><a href="#4-判断下一个元素的数据类型" class="headerlink" title="4.判断下一个元素的数据类型"></a>4.判断下一个元素的数据类型</h2><p>Scanner类提供了一系列的<code>hasNextXxx()</code>方法，用于判断下一个Token是否是指定的数据类型。</p>
+<p>例如，以下代码片段演示了如何使用<code>hasNextInt()</code>方法判断下一个Token是否是一个整数：</p>
+<pre><code class="java">Scanner scanner = new Scanner(System.in);
+System.out.print(&quot;请输入一个整数值: &quot;);
+if (scanner.hasNextInt()) &#123;
+    int num = scanner.nextInt();
+    System.out.println(&quot;输入的整数值为: &quot; + num);
+&#125; else &#123;
+    System.out.println(&quot;输入不是一个整数值。&quot;);
+&#125;
+</code></pre>
+<p>在上述示例中，<code>hasNextInt()</code>方法用于判断输入的下一个Token是否是一个整数，如果是，则读取该整数值并输出，否则输出错误信息。</p>
+<h2 id="5-读取字符串"><a href="#5-读取字符串" class="headerlink" title="5.读取字符串"></a>5.读取字符串</h2><p>Scanner类提供了两个方法用于读取字符串：</p>
+<ul>
+<li><code>next()</code>：读取到下一个分隔符（默认为空格）之前的字符串作为一个字符串值。</li>
+<li><code>nextLine()</code>：读取到下一行作为一个字符串值。</li>
+</ul>
+<p>例如，以下代码片段演示了如何使用<code>next()</code>方法读取多个字符串：</p>
+<pre><code class="java">Scanner scanner = new Scanner(System.in);
+System.out.print(&quot;请输入多个字符串，使用空格分隔: &quot;);
+while (scanner.hasNext()) &#123;
+    String str = scanner.next();
+    System.out.println(&quot;读取到的字符串: &quot; + str);
+&#125;
+</code></pre>
+<h2 id="6-关闭资源"><a href="#6-关闭资源" class="headerlink" title="6.关闭资源"></a>6.关闭资源</h2><p>使用完Scanner类后，应该调用<code>close()</code>方法关闭Scanner并释放相关资源。</p>
+<p>例如，以下代码片段演示了如何关闭Scanner：</p>
+<pre><code class="java">Scanner scanner = new Scanner(System.in);
+// 使用Scanner读取输入
+scanner.close(); // 关闭Scanner
+</code></pre>
+<h2 id="7-其他方法"><a href="#7-其他方法" class="headerlink" title="7.其他方法"></a>7.其他方法</h2><p>除了上述提到的方法之外，Scanner类还提供了其他一些方法，例如：</p>
+<ul>
+<li><code>useLocale()</code>：使用指定的区域设置- <code>next(pattern)</code>：根据指定的模式读取输入，并返回匹配该模式的字符串。例如，<code>scanner.next(&quot;\\d+&quot;)</code>将读取下一个符合正则表达式<code>\d+</code>的字符串。</li>
+<li><code>findInLine(pattern)</code>：根据指定的模式在当前行中查找下一个匹配的字符串，并返回该字符串。例如，<code>scanner.findInLine(&quot;Hello&quot;)</code>将查找当前行中的下一个出现的”Hello”字符串。</li>
+<li><code>match()</code>：检查输入是否与指定模式匹配，并返回一个匹配结果的<code>MatchResult</code>对象。可以通过该对象获取匹配到的子字符串和捕获组。</li>
+<li><code>input.mark()</code>：标记输入的当前位置，可以通过<code>input.reset()</code>将输入重置到最近的标记位置。</li>
+<li><code>radix()</code>：指定输入数字的基数。默认情况下，Scanner将假设输入的数字为十进制，但可以使用<code>scanner.radix(16)</code>来指定输入为十六进制。</li>
+</ul>
+<p>这些方法提供了更灵活的方式来处理输入数据，并根据需要进行匹配、查找和标记操作。</p>
+<p>请注意，使用Scanner类时，需要导入<code>java.util.Scanner</code>包。</p>
+<hr>
+<p>深入理解异常处理机制</p>
+<h2 id="1-异常的概念和分类"><a href="#1-异常的概念和分类" class="headerlink" title="1. 异常的概念和分类"></a>1. 异常的概念和分类</h2><p>异常是指在程序执行过程中可能出现的错误、故障或异常情况。Java中的异常分为两类：可检查异常（Checked Exception）和不可检查异常（Unchecked Exception）。</p>
+<ul>
+<li>可检查异常：继承自<code>Exception</code>类或其子类的异常，编译器会强制要求程序处理这类异常，例如<code>IOException</code>、<code>SQLException</code>等。</li>
+<li>不可检查异常：继承自<code>RuntimeException</code>类或其子类的异常，编译器不会强制要求程序处理这类异常，例如<code>NullPointerException</code>、<code>ArrayIndexOutOfBoundsException</code>等。</li>
+</ul>
+<h2 id="2-异常处理的基本原则"><a href="#2-异常处理的基本原则" class="headerlink" title="2. 异常处理的基本原则"></a>2. 异常处理的基本原则</h2><p>在处理异常时，有一些基本原则需要遵循：</p>
+<ul>
+<li>捕获和处理异常：使用<code>try-catch</code>语句块来捕获可能抛出的异常，并在<code>catch</code>块中处理异常情况。</li>
+<li>抛出异常：当无法处理异常时，可以通过<code>throw</code>语句手动抛出异常，将异常传递给调用者进行处理。</li>
+<li>异常链：通过将当前异常作为参数传递给新的异常，可以构建异常链，以提供更多关于异常发生的上下文信息。</li>
+<li>finally块：使用<code>finally</code>块来执行无论是否发生异常都需要执行的代码，例如资源释放等。</li>
+</ul>
+<h2 id="3-常见的异常类"><a href="#3-常见的异常类" class="headerlink" title="3. 常见的异常类"></a>3. 常见的异常类</h2><p>Java提供了一系列常见的异常类，覆盖了各种常见的错误和异常情况。以下是一些常见的异常类及其用途：</p>
+<pre><code class="java">Object
+    └── Throwable
+        ├── Error
+        │   ├── LinkageError：链接错误，如类加载失败
+        │   │   ├── ClassFormatError：类文件格式错误
+        │   │   ├── ExceptionInInitializerError：静态初始化器引发异常
+        │   │   └── NoClassDefFoundError：找不到类定义错误
+        │   ├── ThreadDeath：线程中断
+        │   └── VirtualMachineError：虚拟机错误，表示虚拟机内部的严重问题
+        │       ├── InternalError：虚拟机内部错误
+        │       ├── OutOfMemoryError：内存不足错误
+        │       ├── StackOverflowError：堆栈溢出错误
+        │       └── ...
+        └── Exception
+            ├── RuntimeException：不可检查异常的父类
+            │   ├── NullPointerException：空指针异常
+            │   ├── ArrayIndexOutOfBoundsException：数组索引越界异常
+            │   ├── ArithmeticException：算术异常
+            │   ├── IllegalArgumentException：非法参数异常
+            │   ├── IllegalStateException：非法状态异常
+            │   ├── IndexOutOfBoundsException：索引越界异常
+            │   ├── UnsupportedOperationException：不支持的操作异常
+            │   └── ...
+            ├── InterruptedException：中断异常，表示线程被中断
+            ├── ClassNotFoundException：类未找到异常
+            ├── CloneNotSupportedException：克隆不支持异常
+            ├── IllegalAccessException：非法访问异常
+            ├── InstantiationException：实例化异常
+            ├── NoSuchFieldException：字段未找到异常
+            ├── NoSuchMethodException：方法未找到异常
+            ├── ReflectiveOperationException：反射操作异常的父类
+            │   ├── InvocationTargetException：反射调用目标异常
+            │   └── ...
+            ├── IOException：输入/输出异常，指示发生了I/O错误
+            │   ├── FileNotFoundException：文件未找到异常
+            │   ├── EOFException：文件已结束异常
+            │   ├── NotSerializableException：不可序列化异常
+            │   ├── UnsupportedEncodingException：不支持的编码异常
+            │   ├── InterruptedIOException：中断的I/O异常
+            │   └── ...
+            ├── AnnotationFormatError：注解格式错误
+            ├── AnnotationTypeMismatchException：注解类型不匹配异常
+            ├── IncompleteAnnotationException：不完整注解异常
+            ├── MirroredTypeException：镜像类型异常
+            └── ...
+</code></pre>
+<h2 id="4-自定义异常"><a href="#4-自定义异常" class="headerlink" title="4. 自定义异常"></a>4. 自定义异常</h2><p>除了使用Java提供的异常类外，开发人员还可以根据需要创建自定义异常类。自定义异常类可以继承自<code>Exception</code>或其子类，并添加额外的属性和行为，以便更好地表示特定的异常情况。</p>
+<p>例如，以下是一个自定义异常类的示例：</p>
+<pre><code class="java">public class MyException extends Exception &#123;
+    private int errorCode;
+
+    public MyException(String message, int errorCode) &#123;
+        super(message);
+        this.errorCode = errorCode;
+    &#125;
+
+    public int getErrorCode() &#123;
+        return errorCode;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="5-异常处理的最佳实践"><a href="#5-异常处理的最佳实践" class="headerlink" title="5. 异常处理的最佳实践"></a>5. 异常处理的最佳实践</h2><ul>
+<li><p>在Java中，异常处理是通过使用<code>try-catch</code>块来实现的。<code>try-catch</code>块用于捕获和处理可能会抛出异常的代码段。下面是Java中异常处理的基本结构：</p>
+<pre><code class="java">try &#123;
+    // 可能会抛出异常的代码
+&#125; catch (ExceptionType1 e1) &#123;
+    // 处理 ExceptionType1 类型的异常
+&#125; catch (ExceptionType2 e2) &#123;
+    // 处理 ExceptionType2 类型的异常
+&#125; finally &#123;
+    // 可选的 finally 代码块
+&#125;
+</code></pre>
+<p>代码块<code>try</code>包含可能会抛出异常的代码。如果在<code>try</code>块中的代码引发了异常，那么异常将被捕获，并且程序会跳转到与异常类型匹配的<code>catch</code>块。在<code>catch</code>块中，你可以编写处理异常的代码逻辑。可以有多个<code>catch</code>块来处理不同类型的异常。最后，你还可以使用可选的<code>finally</code>块，在<code>try-catch</code>块执行完毕后执行一些清理操作，无论是否发生异常.</p>
+<p>当异常被捕获后，你可以进行更深入的处理和操作。以下是一些在异常捕获后可用的方法和技巧：</p>
+<ol>
+<li><p>获取异常信息：</p>
+<ul>
+<li><code>getMessage()</code>: 通过调用异常对象的<code>getMessage()</code>方法，你可以获取异常的详细描述信息字符串。这个信息通常包含了异常的原因和相关的上下文信息。</li>
+<li><code>toString()</code>: 异常对象的<code>toString()</code>方法返回异常的字符串表示形式。这个字符串通常包含了异常的类名和异常消息。</li>
+</ul>
+</li>
+<li><p>打印异常堆栈跟踪信息：</p>
+<ul>
+<li><code>printStackTrace()</code>: 异常对象的<code>printStackTrace()</code>方法用于打印异常的完整堆栈跟踪信息。堆栈跟踪信息包含了异常发生的位置、调用链和相关的方法调用。这对于调试和定位异常发生的原因非常有用。</li>
+</ul>
+</li>
+<li><p>日志记录：</p>
+<ul>
+<li>使用日志记录框架（如log4j、slf4j等）将异常信息记录到日志文件中。这对于后续的故障排除和分析非常重要。你可以选择记录完整的堆栈跟踪信息或只记录异常消息。</li>
+</ul>
+</li>
+<li><p>异常处理和恢复：</p>
+<ul>
+<li>在<code>catch</code>块中，你可以编写逻辑来处理异常，尝试修复错误或采取其他措施。这可能包括重试操作、回滚事务、恢复到备用方案等。</li>
+<li>你还可以选择重新抛出异常，将异常传递给上层调用者处理。使用<code>throw</code>语句将捕获的异常重新抛出。</li>
+</ul>
+</li>
+<li><p>资源释放和清理：</p>
+<ul>
+<li>在异常处理过程中，你可以使用<code>finally</code>块来执行资源释放和清理操作。这些操作可能包括关闭文件、释放数据库连接、释放内存等。<code>finally</code>块中的代码无论是否发生异常都会执行。</li>
+</ul>
+</li>
+</ol>
+<p>下面是一个更详细的示例，说明了在异常捕获后的一些操作：</p>
+<pre><code class="java">import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class ExceptionHandlingExample &#123;
+    public static void main(String[] args) &#123;
+        FileInputStream fileInputStream = null;
+        try &#123;
+            fileInputStream = new FileInputStream(&quot;nonexistent-file.txt&quot;);
+            // 执行其他操作，比如读取文件内容
+        &#125; catch (FileNotFoundException e) &#123;
+            System.out.println(&quot;Error: File not found&quot;);
+            System.out.println(&quot;Exception message: &quot; + e.getMessage());
+            System.out.println(&quot;Exception details: &quot; + e.toString());
+            e.printStackTrace();
+            
+            
+            // 获取异常信息并打印
+            System.out.println(&quot;Error: &quot; + e.getMessage());
+            
+            // 记录异常到日志文件
+            logException(e);
+            
+            // 执行异常处理逻辑，比如返回默认值
+            int defaultValue = 0;
+            System.out.println(&quot;Using default value: &quot; + defaultValue);
+            
+            // 重新抛出异常（可选）
+            // throw e;
+            
+            
+            
+            
+        &#125; finally &#123;
+            // 关闭文件输入流
+            if (fileInputStream != null) &#123;
+                try &#123;
+                    fileInputStream.close();
+                &#125; catch (Exception e) &#123;
+                    // 处理关闭文件过程中的异常
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            System.out.println(&quot;Finally block executed&quot;);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>在上面的示例中，我们尝试打开一个不存在的文件，并在<code>catch</code>块中捕获了<code>FileNotFoundException</code>。在<code>catch</code>块中，我们打印了异常消息、字符串表示形式和堆栈跟踪信息。在<code>finally</code>块中，我们关闭了文件输入流，并在关闭过程中处理了可能发生的异常。</p>
+<p>这只是异常处理的一些示例。在实际应用中，你可以根据具体场景和需求，结合异常处理的特性和其他相关技术，编写更复杂的异常处理逻辑。</p>
+<p>希望这次更详细的解答能够满足你的需求。如果你还有其他问题，请随时提问。</p>
+</li>
+</ul>
+<h2 id="6-异常处理的层次结构"><a href="#6-异常处理的层次结构" class="headerlink" title="6. 异常处理的层次结构"></a>6. 异常处理的层次结构</h2><p>Java异常体系采用层次结构来组织异常类。所有异常类都直接或间接继承自<code>Throwable</code>类。<code>Throwable</code>类有两个重要的子类：<code>Error</code>和<code>Exception</code>。</p>
+<ul>
+<li><code>Error</code>：表示严重错误和系统故障，通常无法恢复，例如<code>OutOfMemoryError</code>、<code>StackOverflowError</code>等。程序一般不捕获处理<code>Error</code>。</li>
+<li><code>Exception</code>：表示程序运行期间可能出现的异常情况。<code>Exception</code>又分为可检查异常（Checked Exception）和不可检查异常（Unchecked Exception），前文已进行了介绍。</li>
+</ul>
+<h2 id="7-异常处理的工具类"><a href="#7-异常处理的工具类" class="headerlink" title="7. 异常处理的工具类"></a>7. 异常处理的工具类</h2><p>Java还提供了一些异常处理的工具类，以简化异常处理的过程。例如：</p>
+<ul>
+<li><code>try-catch-resources</code>：可以在<code>try</code>块中使用资源，无需手动关闭资源，确保资源的正确关闭。</li>
+<li><code>Objects.requireNonNull()</code>：用于检查参数是否为null，如果为null，则抛出<code>NullPointerException</code>，提供更好的错误信息。</li>
+</ul>
+<p>些具类可以提高异常处理的效率和可读性。</p>
+<h2 id="8-主动抛出异常throw和throws"><a href="#8-主动抛出异常throw和throws" class="headerlink" title="8.主动抛出异常throw和throws"></a>8.主动抛出异常throw和throws</h2><p>当涉及到异常处理时，Java中有两个关键字，<code>throw</code>和<code>throws</code>，它们用于不同的目的。</p>
+<ol>
+<li><p><code>throw</code>关键字：</p>
+<ul>
+<li><code>throw</code>关键字用于在代码中手动抛出异常。你可以使用<code>throw</code>关键字创建并抛出自定义的异常对象，或者将捕获的异常重新抛出给上层调用者处理。</li>
+<li>使用<code>throw</code>关键字时，后面跟着要抛出的异常对象。这个异常对象必须是<code>Throwable</code>类或其子类的实例。</li>
+<li>一旦<code>throw</code>语句执行，程序的控制权将立即转移到异常处理机制，查找适当的异常处理代码块来处理抛出的异常。</li>
+</ul>
+<p>下面是一个示例，演示了如何使用<code>throw</code>关键字手动抛出异常：</p>
+<pre><code class="java">public class ThrowExample &#123;
+    public static void main(String[] args) &#123;
+        int age = -1;
+        try &#123;
+            validateAge(age);
+        &#125; catch (IllegalArgumentException e) &#123;
+            System.out.println(&quot;Invalid age: &quot; + e.getMessage());
+        &#125;
+    &#125;
+
+    public static void validateAge(int age) &#123;
+        if (age &lt; 0) &#123;
+            throw new IllegalArgumentException(&quot;Age cannot be negative&quot;);
+        &#125;
+        // 其他验证逻辑...
+    &#125;
+&#125;
+</code></pre>
+<p>在上面的示例中，<code>validateAge</code>方法用于验证年龄是否为负数。如果年龄为负数，就会使用<code>throw</code>关键字抛出<code>IllegalArgumentException</code>异常，并提供异常的详细信息。在<code>main</code>方法中，我们捕获并处理了这个异常。</p>
+</li>
+<li><p><code>throws</code>关键字：</p>
+<ul>
+<li><code>throws</code>关键字用于在方法签名中声明可能抛出的异常。通过在方法声明中使用<code>throws</code>关键字，你可以告诉调用者该方法可能会抛出特定类型的异常，从而提醒调用者处理这些异常。</li>
+<li>在方法声明中，可以跟随一个或多个异常类型，用逗号分隔。这些异常类型必须是<code>Throwable</code>类或其子类。</li>
+<li>当一个方法声明使用了<code>throws</code>关键字时，调用该方法的代码必须处理或继续抛出这些异常。</li>
+<li><code>throws</code>关键字将异常的责任从方法内部转移到了调用者。</li>
+</ul>
+<p>下面是一个示例，演示了如何在方法声明中使用<code>throws</code>关键字：</p>
+<pre><code class="java">import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class ThrowsExample &#123;
+    public static void main(String[] args) &#123;
+        try &#123;
+            readFile(&quot;nonexistent-file.txt&quot;);
+        &#125; catch (FileNotFoundException e) &#123;
+            System.out.println(&quot;File not found: &quot; + e.getMessage());
+        &#125;
+    &#125;
+
+    public static void readFile(String filename) throws FileNotFoundException &#123;
+        FileReader fileReader = new FileReader(filename);
+        // 读取文件内容...
+        // 其他操作...
+    &#125;
+&#125;
+</code></pre>
+<p>在上面的示例中，<code>readFile</code>方法声明使用了<code>throws</code>关键字，并指定了<code>FileNotFoundException</code>异常。这告诉调用者该方法可能会抛出<code>FileNotFoundException</code>异常。在<code>main</code>方法中，我们捕获并处理了这个异常。</p>
+</li>
+</ol>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzQ2MC8zMzkyNA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">baixie-g</div><div class="author-info__description">欢迎，阅读，点评</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/baixie-g/baixie-g.github.io"><i class="fab fa-github"></i><span>跟我走</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/baixie-g/baixie-g.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2039279630@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">g的blog正在建设欢迎您</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从2022.12以后"/></a><div class="content"><a class="title" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后">从2022.12以后</a><time datetime="2022-11-18T10:49:00.000Z" title="Created 2022-11-18 18:49:00">2022-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更"><img src="/img/loading.gif" data-original="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于周更"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更">关于周更</a><time datetime="2022-10-16T10:49:00.000Z" title="Created 2022-10-16 18:49:00">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/08/BLOGDAY1/" title="梦开始地方"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦开始地方"/></a><div class="content"><a class="title" href="/2022/10/08/BLOGDAY1/" title="梦开始地方">梦开始地方</a><time datetime="2022-10-08T03:34:12.000Z" title="Created 2022-10-08 11:34:12">2022-10-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">657</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-07T14:21:55.755Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By baixie-g</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="//code.tidio.co/fxvtgx4i7agcyminid1u0se6mqe2neyt.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"./live2d_models/haruna/33/model.2017.tomo-bukatsu.high.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body></html>
