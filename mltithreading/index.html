@@ -5,13 +5,13 @@
 <meta property="og:site_name" content="没时间的菜鸟">
 <meta property="og:description" content="页面描述">
 <meta property="og:locale" content="zh_CH">
-<meta property="og:image" content="https://baixie-g.github.io/themes/butterfly/source/img/txy1.jpg">
+<meta property="og:image" content="https://baixie-g.github.io/themes/butterfly/source/img/txy2.jpg">
 <meta property="article:published_time" content="2023-08-06T03:08:05.000Z">
-<meta property="article:modified_time" content="2023-08-07T11:24:41.220Z">
+<meta property="article:modified_time" content="2023-08-12T04:36:00.584Z">
 <meta property="article:author" content="baixie-g">
 <meta property="article:tag" content="glj,博客,baixie-g,软件工程,计算机,HFUT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://baixie-g.github.io/themes/butterfly/source/img/txy1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://baixie-g.github.io/mltithreading/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://baixie-g.github.io/themes/butterfly/source/img/txy2.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://baixie-g.github.io/mltithreading/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: false,
-  postUpdate: '2023-08-07 19:24:41'
+  postUpdate: '2023-08-12 12:36:00'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -187,37 +187,221 @@
 </ol>
 <p>通过合理地使用多线程，可以充分发挥多核处理器的优势，提高程序的并发性和性能。同时，也需要注意线程安全和避免常见的多线程问题，如死锁、活锁和资源竞争等。</p>
 <h2 id="以下是Java中Thread类常用的方法："><a href="#以下是Java中Thread类常用的方法：" class="headerlink" title="以下是Java中Thread类常用的方法："></a>以下是Java中Thread类常用的方法：</h2><ol>
-<li><p>start()：<br>启动线程并使其进入可运行状态，线程会自动调用run()方法执行线程的任务。</p>
+<li><p><strong>构造方法</strong>：</p>
+<ul>
+<li><code>Thread()</code>: 创建一个新的线程对象。</li>
+<li><code>Thread(Runnable target)</code>: 创建一个带有指定 <code>Runnable</code> 任务的线程对象。</li>
+<li><code>Thread(String name)</code>: 创建一个新的线程对象，指定线程名称。</li>
+<li><code>Thread(Runnable target, String name)</code>: 创建一个带有指定 <code>Runnable</code> 任务和名称的线程对象。</li>
+<li><code>Thread(ThreadGroup group, Runnable target)</code>: 创建一个带有指定线程组和 <code>Runnable</code> 任务的线程对象。</li>
+<li><code>Thread(ThreadGroup group, Runnable target, String name)</code>: 创建一个带有指定线程组、<code>Runnable</code> 任务和名称的线程对象。</li>
+</ul>
 </li>
-<li><p>run()：<br>定义线程的任务逻辑，线程在启动后会自动调用run()方法来执行任务。</p>
+<li><p><strong>线程状态控制方法</strong>：</p>
+<ul>
+<li><code>void start()</code>: 启动线程，使其进入可运行状态。线程启动后会调用 <code>run()</code> 方法。</li>
+<li><code>void run()</code>: 线程的主体方法，需要自行实现。当线程处于可运行状态时，<code>run()</code> 方法会被调用。</li>
+<li><code>void sleep(long millis) throws InterruptedException</code>: 让线程休眠指定的毫秒数。在休眠期间，线程处于阻塞状态。</li>
+<li><code>static void sleep(long millis, int nanos) throws InterruptedException</code>: 让线程休眠指定的毫秒数和纳秒数。</li>
+<li><code>void join() throws InterruptedException</code>: 等待调用线程结束。在调用线程执行完毕前，当前线程会一直阻塞。</li>
+<li><code>void join(long millis) throws InterruptedException</code>: 最多等待指定毫秒数，然后继续执行。</li>
+<li><code>void join(long millis, int nanos) throws InterruptedException</code>: 最多等待指定毫秒数和纳秒数。</li>
+<li><code>void interrupt()</code>: 中断线程。可以通过检查线程的中断状态（使用 <code>isInterrupted()</code> 方法）来决定是否停止线程的执行。</li>
+</ul>
 </li>
-<li><p>sleep(long millis)：<br>使线程休眠指定的毫秒数，暂时放弃CPU的执行时间，但不会释放锁。</p>
+<li><p><strong>线程信息查询方法</strong>：</p>
+<ul>
+<li><code>String getName()</code>: 获取线程名称。</li>
+<li><code>long getId()</code>: 获取线程的唯一标识符。</li>
+<li><code>Thread.State getState()</code>: 获取线程的当前状态。</li>
+<li><code>boolean isAlive()</code>: 判断线程是否处于活动状态。</li>
+<li><code>boolean isInterrupted()</code>: 判断线程是否被中断，但不清除中断状态。</li>
+<li><code>static Thread currentThread()</code>: 获取当前正在执行的线程对象。</li>
+</ul>
 </li>
-<li><p>join()：<br>等待调用该方法的线程执行完毕后再继续执行当前线程。</p>
+<li><p><strong>线程优先级控制方法</strong>：</p>
+<ul>
+<li><code>void setPriority(int priority)</code>: 设置线程的优先级，范围从 <code>Thread.MIN_PRIORITY</code> 到 <code>Thread.MAX_PRIORITY</code>。</li>
+<li><code>int getPriority()</code>: 获取线程的优先级。</li>
+</ul>
 </li>
-<li><p>interrupt()：<br>中断线程，给线程发送中断信号，可以通过isInterrupted()方法检查线程是否被中断。</p>
+<li><p><strong>线程同步方法</strong>：</p>
+<ul>
+<li><code>static void yield()</code>: 提示线程调度器当前线程愿意放弃当前对处理器的使用，以便其他线程有机会执行。</li>
+</ul>
 </li>
-<li><p>isInterrupted()：<br>检查线程是否被中断。</p>
+<li><p><strong>线程组相关方法</strong>：</p>
+<ul>
+<li><code>ThreadGroup getThreadGroup()</code>: 获取线程所属的线程组。</li>
+<li><code>static int activeCount()</code>: 获取当前线程组及其子组中活动线程的总数。</li>
+</ul>
 </li>
-<li><p>setPriority(int priority)：<br>设置线程的优先级，范围为1-10，数值越大表示优先级越高。</p>
-</li>
-<li><p>getPriority()：<br>获取线程的优先级。</p>
-</li>
-<li><p>getName()：<br>获取线程的名称。</p>
-</li>
-<li><p>setName(String name)：<br>设置线程的名称。</p>
-</li>
-<li><p>isAlive()：<br>检查线程是否还存活，即线程是否已启动且尚未结束。</p>
-</li>
-<li><p>yield()：<br>暂停当前线程，并允许其他线程执行，但不会释放锁。</p>
-</li>
-<li><p>wait()、notify()和notifyAll()：<br>用于线程间的等待和通知机制，必须在synchronized代码块中使用。</p>
-</li>
-<li><p>synchronized关键字：<br>用于实现线程同步，可以修饰方法或代码块，确保同一时间只有一个线程可以进入被锁定的代码段。</p>
+<li><p><strong>其他方法</strong>：</p>
+<ul>
+<li><code>static void sleep(long millis) throws InterruptedException</code>: 让当前线程休眠指定毫秒数。</li>
+</ul>
 </li>
 </ol>
 <p>这些方法是Thread类的常用方法，可以用于创建和管理线程，控制线程的执行顺序和状态。使用这些方法可以实现多线程编程中的线程控制、同步和通信等功能。</p>
-</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzQ2MC8zMzkyNA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">baixie-g</div><div class="author-info__description">欢迎，阅读，点评</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/baixie-g/baixie-g.github.io"><i class="fab fa-github"></i><span>跟我走</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/baixie-g/baixie-g.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2039279630@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">g的blog正在建设欢迎您</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/08/%E8%BF%99%E5%8D%8A%E5%B9%B4%E6%9B%B4%E6%96%B0%E7%9A%84/" title="一直到2023.8.8"><img src="/img/loading.gif" data-original="https://s2.loli.net/2022/10/08/JiMLadFYZhGCW1v.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一直到2023.8.8"/></a><div class="content"><a class="title" href="/2023/08/08/%E8%BF%99%E5%8D%8A%E5%B9%B4%E6%9B%B4%E6%96%B0%E7%9A%84/" title="一直到2023.8.8">一直到2023.8.8</a><time datetime="2023-08-08T10:49:00.000Z" title="Created 2023-08-08 18:49:00">2023-08-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后"><img src="/img/loading.gif" data-original="https://s2.loli.net/2022/10/08/JiMLadFYZhGCW1v.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从2022.12以后"/></a><div class="content"><a class="title" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后">从2022.12以后</a><time datetime="2022-11-18T10:49:00.000Z" title="Created 2022-11-18 18:49:00">2022-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于周更"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更">关于周更</a><time datetime="2022-10-16T10:49:00.000Z" title="Created 2022-10-16 18:49:00">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/08/BLOGDAY1/" title="梦开始地方"><img src="/img/loading.gif" data-original="/img/default_top_img.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦开始地方"/></a><div class="content"><a class="title" href="/2022/10/08/BLOGDAY1/" title="梦开始地方">梦开始地方</a><time datetime="2022-10-08T03:34:12.000Z" title="Created 2022-10-08 11:34:12">2022-10-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">2.1k</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-08T08:12:13.617Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By baixie-g</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+<h2 id="终端线程"><a href="#终端线程" class="headerlink" title="终端线程"></a>终端线程</h2><h3 id="1-t-interrupt（）"><a href="#1-t-interrupt（）" class="headerlink" title="1.t.interrupt（）"></a>1.t.interrupt（）</h3><pre><code class="java">try &#123;
+    Thread.sleep(100);
+    hello.join();
+    //当一个线程调用了一个阻塞方法（如 Thread.sleep()、Object.wait()、Thread.join() 等）或者等待某个锁时，它可能会进入等待或阻塞状态。如果此时其他线程调用了该线程的 interrupt() 方法，就会导致被阻塞的线程抛出 InterruptedException 异常。
+&#125; catch (InterruptedException e) &#123;
+    System.out.println(&quot;interrupted!&quot;);
+    break;
+&#125;
+</code></pre>
+<h3 id="2-共享变量"><a href="#2-共享变量" class="headerlink" title="2.共享变量"></a>2.共享变量</h3><p>线程间共享的变量public volatile boolean running &#x3D; true;</p>
+<p><code>volatile</code>关键字的目的是告诉虚拟机：</p>
+<ul>
+<li>每次访问变量时，总是获取主内存的最新值；</li>
+<li>每次修改变量后，立刻回写到主内存。</li>
+</ul>
+<pre><code class="ascii">┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
+           Main Memory
+│                               │
+   ┌───────┐┌───────┐┌───────┐
+│  │ var A ││ var B ││ var C │  │
+   └───────┘└───────┘└───────┘
+│     │ ▲               │ ▲     │
+ ─ ─ ─│─│─ ─ ─ ─ ─ ─ ─ ─│─│─ ─ ─
+      │ │               │ │
+┌ ─ ─ ┼ ┼ ─ ─ ┐   ┌ ─ ─ ┼ ┼ ─ ─ ┐
+      ▼ │               ▼ │
+│  ┌───────┐  │   │  ┌───────┐  │
+   │ var A │         │ var C │
+│  └───────┘  │   │  └───────┘  │
+   Thread 1          Thread 2
+└ ─ ─ ─ ─ ─ ─ ┘   └ ─ ─ ─ ─ ─ ─ ┘
+</code></pre>
+<p>如果我们去掉<code>volatile</code>关键字，运行上述程序，发现效果和带<code>volatile</code>差不多，这是因为在x86的架构下，JVM回写主内存的速度非常快，但是，换成ARM的架构，就会有显著的延迟。</p>
+<h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>有一种线程的目的就是无限循环，例如，一个定时触发任务的线程</p>
+<p>JVM退出时，不必关心守护线程是否已结束。</p>
+<pre><code class="java">Thread t = new MyThread();
+t.setDaemon(true);
+t.start();
+</code></pre>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>多个线程同时读写共享变量-&gt;原子操作</p>
+<pre><code class="ascii">┌───────┐    ┌───────┐
+│Thread1│    │Thread2│
+└───┬───┘    └───┬───┘
+    │            │
+    │ILOAD (100) │
+    │            │ILOAD (100)
+    │            │IADD
+    │            │ISTORE (101)
+    │IADD        │
+    │ISTORE (101)│
+    ▼            ▼
+</code></pre>
+<pre><code>class Counter &#123;
+    public static final Object lock = new Object();
+    public static int studentCount = 0;
+    public static int teacherCount = 0;
+&#125;
+
+
+
+synchronized(Counter.lock) &#123; // 获取锁
+    ...
+&#125; // 释放锁
+</code></pre>
+<ol>
+<li>操作需要进行同步，以避免多个线程同时修改相同的数据库记录或文件内容，引发冲突和数据错误。</li>
+<li>线程间的通信和协作：当线程之间需要进行协作、通信或等待特定条件时，需要使用同步锁来确保线程的正确等待和唤醒，以避免竞态条件和不正确的执行顺序。</li>
+<li>缓冲区或队列的操作：在多线程环境下使用缓冲区或队列时，需要使用同步锁来保护共享数据结构，以确保线程安全的插入、删除或读取操作。</li>
+<li>单例模式：在多线程环境下使用单例模式时，需要对单例对象的创建和访问进行同步锁的保护，以避免多个线程同时创建多个实例或访问未完全初始化的实例。</li>
+<li>跨对象的操作：当多个线程同时操作多个相关的对象时，需要使用同步锁来保护整个操作过程，以避免不一致的状态或并发修改引起的问题。</li>
+</ol>
+<p>下面是一些常见的单条原子操作的语句，它们不需要额外的同步保护：</p>
+<ol>
+<li>基本数据类型的赋值操作，如 <code>int</code>、<code>long</code>、<code>boolean</code>、<code>char</code> 等。</li>
+</ol>
+<pre><code class="java">int x = 5; // 原子操作，不需要同步
+</code></pre>
+<ol start="2">
+<li>引用类型的赋值操作，当引用变量的赋值操作是原子性的时候。</li>
+</ol>
+<pre><code class="java">MyObject obj = new MyObject(); // 原子操作，不需要同步
+</code></pre>
+<ol start="3">
+<li><code>volatile</code> 关键字修饰的变量的读取和写入操作。</li>
+</ol>
+<pre><code class="java">volatile boolean flag = true; // 原子操作，不需要同步
+</code></pre>
+<ol start="4">
+<li>对象的引用传递。</li>
+</ol>
+<pre><code class="java">public void doSomething(MyObject obj) &#123;
+    // ...
+&#125;
+</code></pre>
+<p>在上述情况下，由于操作是原子的，不会出现线程安全问题，因此不需要额外的同步措施。</p>
+<p>然而，需要注意的是，当多个原子操作组合成一个复合操作时，就需要考虑同步问题了。</p>
+<h2 id="同步方法"><a href="#同步方法" class="headerlink" title="同步方法"></a>同步方法</h2><p>线程自己选择锁对象?不利于封装.把<code>synchronized</code>逻辑封装起来!</p>
+<p>当一个线程进入同步方法时，它将锁定该方法所属对象，其他线程将被阻塞直到该线程执行完毕释放锁。</p>
+<pre><code class="java">public synchronized void synchronizedMethod() &#123;
+    // 这里是需要同步的代码
+&#125;
+//或者说
+public class Counter &#123;
+    private int count = 0;
+
+    public void add(int n) &#123;
+        synchronized(this) &#123;
+            count += n;
+        &#125;
+    &#125;
+
+    public void dec(int n) &#123;
+        synchronized(this) &#123;
+            count -= n;
+        &#125;
+    &#125;
+
+    public int get() &#123;
+        return count;
+    &#125;
+&#125;
+var c1 = Counter();
+var c2 = Counter();
+
+// 对c1进行操作的线程:
+new Thread(() -&gt; &#123;
+    c1.add();
+&#125;).start();
+new Thread(() -&gt; &#123;
+    c1.dec();
+&#125;).start();
+
+// 对c2进行操作的线程:
+new Thread(() -&gt; &#123;
+    c2.add();
+&#125;).start();
+new Thread(() -&gt; &#123;
+    c2.dec();
+&#125;).start();
+</code></pre>
+<pre><code class="java">public synchronized void add(int n) &#123; // 锁住this
+    count += n;
+&#125; // 解锁
+</code></pre>
+<hr>
+<h2 id="in-android-java"><a href="#in-android-java" class="headerlink" title="in android(java)"></a>in android(java)</h2><p>关于Android的多线程,其实现方式有以下几种:</p>
+<ol>
+<li>Handler - 可以配合Message、Runnable使用,实现线程间通信和任务调度,比较适合用于UI线程与后台线程之间的通讯。</li>
+<li>Thread - 通过继承Thread类,实现run()方法,直接创建线程对象来实现多线程。</li>
+<li>AsyncTask - 异步任务,实现了多线程功能,同时方便与UI线程交互。</li>
+<li>Executor &#x2F; ThreadPoolExecutor - 线程池,可以重用线程,避免频繁创建销毁。</li>
+</ol>
+<p>所以Android多线程主要是通过Handler、Thread、AsyncTask、Executor这些方式来实现的。</p>
+<p>Handler用来配合线程间消息传递和任务调度。</p>
+<p>Thread通过直接继承Thread来创建后台线程。</p>
+<p>AsyncTask方便做后台线程和UI线程的交互。</p>
+<p>Executor&#x2F;ThreadPoolExecutor用来管理线程池,重用线程。</p>
+<p>这些方式各有优劣,可以根据实际需求选择合适的多线程实现方式。常见的是配合Handler + Thread&#x2F;AsyncTask或者Executor + Runnable来实现多线程。</p>
+</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzQ2MC8zMzkyNA"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">baixie-g</div><div class="author-info__description">欢迎，阅读，点评</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/baixie-g/baixie-g.github.io"><i class="fab fa-github"></i><span>跟我走</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/baixie-g/baixie-g.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2039279630@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">g的blog正在建设欢迎您</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/08/%E8%BF%99%E5%8D%8A%E5%B9%B4%E6%9B%B4%E6%96%B0%E7%9A%84/" title="一直到2023.8.8"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一直到2023.8.8"/></a><div class="content"><a class="title" href="/2023/08/08/%E8%BF%99%E5%8D%8A%E5%B9%B4%E6%9B%B4%E6%96%B0%E7%9A%84/" title="一直到2023.8.8">一直到2023.8.8</a><time datetime="2023-08-08T10:49:00.000Z" title="Created 2023-08-08 18:49:00">2023-08-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从2022.12以后"/></a><div class="content"><a class="title" href="/2022/11/18/%E5%91%A8%E6%9B%B4%E5%A4%B1%E8%B4%A5/" title="从2022.12以后">从2022.12以后</a><time datetime="2022-11-18T10:49:00.000Z" title="Created 2022-11-18 18:49:00">2022-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于周更"/></a><div class="content"><a class="title" href="/2022/10/16/%E5%91%A8%E6%9B%B4%E8%AE%A1%E5%88%92/" title="关于周更">关于周更</a><time datetime="2022-10-16T10:49:00.000Z" title="Created 2022-10-16 18:49:00">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/08/BLOGDAY1/" title="梦开始地方"><img src="/img/loading.gif" data-original="/themes/butterfly/source/img/txy2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦开始地方"/></a><div class="content"><a class="title" href="/2022/10/08/BLOGDAY1/" title="梦开始地方">梦开始地方</a><time datetime="2022-10-08T03:34:12.000Z" title="Created 2022-10-08 11:34:12">2022-10-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">November 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">October 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">2.1k</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-12T04:36:22.286Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By baixie-g</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
   if (typeof LivereTower === 'object') {
     window.LivereTower.init()
   }
